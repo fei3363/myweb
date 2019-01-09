@@ -1,0 +1,434 @@
+ 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>飛飛的myweb</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            font-family: 微軟正黑體, Verdana, Arial, Helvetica, sans-serif;
+        }
+        /*
+    DEMO STYLE
+*/
+        
+        @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+        body {
+            //font-family: 'Poppins', sans-serif;
+            //background: #fafafa;
+        }
+        
+        a,
+        a:hover,
+        a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .navbar {
+            padding: 15px 10px;
+            background: #fff;
+            border: none;
+            border-radius: 0;
+            margin-bottom: 40px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-btn {
+            box-shadow: none;
+            outline: none !important;
+            border: none;
+        }
+        
+        .line {
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px dashed #ddd;
+            margin: 40px 0;
+        }
+        /* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+        
+        .wrapper {
+            display: flex;
+            width: 100%;
+            align-items: stretch;
+            perspective: 1500px;
+        }
+        
+        #sidebar {
+            text-align: center;
+            min-width: 300px;
+            max-width: 300px;
+            background: #7386D5;
+            color: #fff;
+            transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+            transform-origin: bottom left;
+        }
+        
+        #sidebar.active {
+            margin-left: -300px;
+            transform: rotateY(100deg);
+        }
+        
+        #sidebar .sidebar-header {
+            padding: 20px;
+            background: #6d7fcc;
+        }
+        
+        #sidebar .img-profile {
+            max-width: 10rem;
+            max-height: 10rem;
+            border: .5rem solid rgba(255, 255, 255, .2)
+        }
+        
+        #sidebar ul {
+            margin: auto auto 0;
+            padding: .5rem;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        
+        #sidebar ul.components {
+            padding: 20px 0;
+            border-bottom: 1px solid #47748b;
+        }
+        
+        #sidebar ul p {
+            color: #fff;
+            padding: 10px;
+        }
+        
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1.1em;
+            display: block;
+        }
+        
+        #sidebar ul li a:hover {
+            color: #7386D5;
+            background: #fff;
+        }
+        
+        #sidebar ul li.active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+            background: #6d7fcc;
+        }
+        
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+        
+        .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        
+        ul.ulliblue li a {
+            background: #6d7fcc !important;
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+        }
+        
+        ul.CTAs {
+            padding: 20px;
+        }
+        
+        ul.CTAs a {
+            text-align: center;
+            font-size: 0.9em !important;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        
+        a.download {
+            background: #fff;
+            color: #7386D5;
+        }
+        
+        a.article,
+        a.article:hover {
+            background: #6d7fcc !important;
+            color: #fff !important;
+        }
+        /* ---------------------------------------------------
+            CONTENT STYLE
+        ----------------------------------------------------- */
+        
+        #content {
+            width: 100%;
+            padding: 20px;
+            min-height: 100vh;
+            transition: all 0.3s;
+        }
+        
+        #sidebarCollapse {
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            cursor: pointer;
+        }
+        
+        #sidebarCollapse span {
+            width: 80%;
+            height: 2px;
+            margin: 0 auto;
+            display: block;
+            background: #555;
+            transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+            transition-delay: 0.2s;
+        }
+        
+        #sidebarCollapse span:first-of-type {
+            transform: rotate(45deg) translate(2px, 2px);
+        }
+        
+        #sidebarCollapse span:nth-of-type(2) {
+            opacity: 0;
+        }
+        
+        #sidebarCollapse span:last-of-type {
+            transform: rotate(-45deg) translate(1px, -1px);
+        }
+        
+        #sidebarCollapse.active span {
+            transform: none;
+            opacity: 1;
+            margin: 5px auto;
+        }
+        /* ---------------------------------------------------
+            MEDIAQUERIES
+        ----------------------------------------------------- */
+        
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -300px;
+                transform: rotateY(90deg);
+            }
+            #sidebar.active {
+                margin-left: 0;
+                transform: none;
+            }
+            #sidebarCollapse span:first-of-type,
+            #sidebarCollapse span:nth-of-type(2),
+            #sidebarCollapse span:last-of-type {
+                transform: none;
+                opacity: 1;
+                margin: 5px auto;
+            }
+            #sidebarCollapse.active span {
+                margin: 0 auto;
+            }
+            #sidebarCollapse.active span:first-of-type {
+                transform: rotate(45deg) translate(2px, 2px);
+            }
+            #sidebarCollapse.active span:nth-of-type(2) {
+                opacity: 0;
+            }
+            #sidebarCollapse.active span:last-of-type {
+                transform: rotate(-45deg) translate(1px, -1px);
+            }
+        }
+    </style>
+
+    <!-- js
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><a href="/">D0449763 林子婷</a></h3>
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="https://i.imgur.com/K29UUcd.png" alt="">
+
+            </div>
+            <ul class="list-unstyled components">
+
+                <li>
+                    <a href="#postSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">最新文章</a> 
+                    <ul class="collapse list-unstyled ulliblue" id="postSubmenu">
+                        
+                        <li>
+                            <a href="/blog/post/2/">使用者經驗設計─課堂作業</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/post/1/">程式語言─課堂作業</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#dateSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">歸檔</a> 
+                    <ul class="collapse list-unstyled ulliblue" id="dateSubmenu">
+                        
+                        <li>
+                            <a href="/blog/archives/2019/1/">2019
+                                        年 1 月</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#categorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">分類</a> 
+                    <ul class="collapse list-unstyled ulliblue" id="categorySubmenu">
+                        
+                        <li>
+                            <a href="/blog/category/1/">程式語言 <span
+                                    class="post-count">(1)</span></a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/category/2/">使用者經驗設計 <span
+                                    class="post-count">(1)</span></a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#tagSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">標籤雲</a>
+                    <ul class="collapse list-unstyled ulliblue" id="tagSubmenu">
+                        
+                        <li>
+                            <a href="/blog/tag/1/">程式語言</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/tag/2/">使用者經驗設計</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="/">回首頁</a>
+                </li>
+
+
+
+            </ul>
+
+
+        </nav>
+
+
+
+        <div id="content">
+            <!-- <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button> -->
+            <button class="btn d-lg-none" id="sidebarCollapse" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <!-- <i class="fas fa-align-justify"></i> -->
+                            <span></span>
+                        <span></span>
+                        <span></span>
+                        </button>
+            <br><br>
+            <div class="container">
+                <div class="row">
+                    <main class="col-md-9">
+                        
+<h2>分類：程式語言 文章列表</h2> 
+<div class="bg-white border mt-4 mb-2">
+    <ul class="list-group list-group-flush">
+        
+        <li class="list-group-item">
+
+            <div>
+                2019年1月10日
+                <div class="d-flex justify-content-end">分類：<a href="/blog/category/1/">程式語言</a></div>
+                <a class="font-weight-bold" href="/blog/post/1/">
+                    <h3 class="text-red 
+                    hover-text-red">程式語言─課堂作業</h3>
+                </a>
+            </div>
+
+
+            <div>
+                <p>關於修習程式語言這門課的作業與內容...</p>
+            </div>
+
+            <div class="entry-meta">
+
+                <div class="d-flex justify-content-end">
+                    <a href="/blog/post/1/">繼續閱讀 <span class="meta-nav">→</span></a>
+
+                </div>
+
+            </div>
+
+        </li>
+        
+    </ul>
+</div>
+
+                    </main>
+
+                    <div class="col-md-3 d-none d-xl-block">
+                        
+<div class=" widget widget-content sticky-top">
+    <img src="/static/img/black_1.gif">
+</div>
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- <footer id="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="copyright">&copy 2019 - 飛飛
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

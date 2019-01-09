@@ -1,0 +1,802 @@
+ 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>飛飛的myweb</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            font-family: 微軟正黑體, Verdana, Arial, Helvetica, sans-serif;
+        }
+        /*
+    DEMO STYLE
+*/
+        
+        @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+        body {
+            //font-family: 'Poppins', sans-serif;
+            //background: #fafafa;
+        }
+        
+        a,
+        a:hover,
+        a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .navbar {
+            padding: 15px 10px;
+            background: #fff;
+            border: none;
+            border-radius: 0;
+            margin-bottom: 40px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-btn {
+            box-shadow: none;
+            outline: none !important;
+            border: none;
+        }
+        
+        .line {
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px dashed #ddd;
+            margin: 40px 0;
+        }
+        /* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+        
+        .wrapper {
+            display: flex;
+            width: 100%;
+            align-items: stretch;
+            perspective: 1500px;
+        }
+        
+        #sidebar {
+            text-align: center;
+            min-width: 300px;
+            max-width: 300px;
+            background: #7386D5;
+            color: #fff;
+            transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+            transform-origin: bottom left;
+        }
+        
+        #sidebar.active {
+            margin-left: -300px;
+            transform: rotateY(100deg);
+        }
+        
+        #sidebar .sidebar-header {
+            padding: 20px;
+            background: #6d7fcc;
+        }
+        
+        #sidebar .img-profile {
+            max-width: 10rem;
+            max-height: 10rem;
+            border: .5rem solid rgba(255, 255, 255, .2)
+        }
+        
+        #sidebar ul {
+            margin: auto auto 0;
+            padding: .5rem;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        
+        #sidebar ul.components {
+            padding: 20px 0;
+            border-bottom: 1px solid #47748b;
+        }
+        
+        #sidebar ul p {
+            color: #fff;
+            padding: 10px;
+        }
+        
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1.1em;
+            display: block;
+        }
+        
+        #sidebar ul li a:hover {
+            color: #7386D5;
+            background: #fff;
+        }
+        
+        #sidebar ul li.active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+            background: #6d7fcc;
+        }
+        
+        a[data-toggle="collapse"] {
+            position: relative;
+        }
+        
+        .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        
+        ul.ulliblue li a {
+            background: #6d7fcc !important;
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+        }
+        
+        ul.CTAs {
+            padding: 20px;
+        }
+        
+        ul.CTAs a {
+            text-align: center;
+            font-size: 0.9em !important;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        
+        a.download {
+            background: #fff;
+            color: #7386D5;
+        }
+        
+        a.article,
+        a.article:hover {
+            background: #6d7fcc !important;
+            color: #fff !important;
+        }
+        /* ---------------------------------------------------
+            CONTENT STYLE
+        ----------------------------------------------------- */
+        
+        #content {
+            width: 100%;
+            padding: 20px;
+            min-height: 100vh;
+            transition: all 0.3s;
+        }
+        
+        #sidebarCollapse {
+            width: 40px;
+            height: 40px;
+            background: #f5f5f5;
+            cursor: pointer;
+        }
+        
+        #sidebarCollapse span {
+            width: 80%;
+            height: 2px;
+            margin: 0 auto;
+            display: block;
+            background: #555;
+            transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+            transition-delay: 0.2s;
+        }
+        
+        #sidebarCollapse span:first-of-type {
+            transform: rotate(45deg) translate(2px, 2px);
+        }
+        
+        #sidebarCollapse span:nth-of-type(2) {
+            opacity: 0;
+        }
+        
+        #sidebarCollapse span:last-of-type {
+            transform: rotate(-45deg) translate(1px, -1px);
+        }
+        
+        #sidebarCollapse.active span {
+            transform: none;
+            opacity: 1;
+            margin: 5px auto;
+        }
+        /* ---------------------------------------------------
+            MEDIAQUERIES
+        ----------------------------------------------------- */
+        
+        @media (max-width: 768px) {
+            #sidebar {
+                margin-left: -300px;
+                transform: rotateY(90deg);
+            }
+            #sidebar.active {
+                margin-left: 0;
+                transform: none;
+            }
+            #sidebarCollapse span:first-of-type,
+            #sidebarCollapse span:nth-of-type(2),
+            #sidebarCollapse span:last-of-type {
+                transform: none;
+                opacity: 1;
+                margin: 5px auto;
+            }
+            #sidebarCollapse.active span {
+                margin: 0 auto;
+            }
+            #sidebarCollapse.active span:first-of-type {
+                transform: rotate(45deg) translate(2px, 2px);
+            }
+            #sidebarCollapse.active span:nth-of-type(2) {
+                opacity: 0;
+            }
+            #sidebarCollapse.active span:last-of-type {
+                transform: rotate(-45deg) translate(1px, -1px);
+            }
+        }
+    </style>
+
+    <!-- js
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><a href="/">D0449763 林子婷</a></h3>
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="https://i.imgur.com/K29UUcd.png" alt="">
+
+            </div>
+            <ul class="list-unstyled components">
+
+                <li>
+                    <a href="#postSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">最新文章</a> 
+                    <ul class="collapse list-unstyled ulliblue" id="postSubmenu">
+                        
+                        <li>
+                            <a href="/blog/post/2/">使用者經驗設計─課堂作業</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/post/1/">程式語言─課堂作業</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#dateSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">歸檔</a> 
+                    <ul class="collapse list-unstyled ulliblue" id="dateSubmenu">
+                        
+                        <li>
+                            <a href="/blog/archives/2019/1/">2019
+                                        年 1 月</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#categorySubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">分類</a> 
+                    <ul class="collapse list-unstyled ulliblue" id="categorySubmenu">
+                        
+                        <li>
+                            <a href="/blog/category/1/">程式語言 <span
+                                    class="post-count">(1)</span></a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/category/2/">使用者經驗設計 <span
+                                    class="post-count">(1)</span></a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#tagSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">標籤雲</a>
+                    <ul class="collapse list-unstyled ulliblue" id="tagSubmenu">
+                        
+                        <li>
+                            <a href="/blog/tag/1/">程式語言</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/blog/tag/2/">使用者經驗設計</a>
+                        </li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="/">回首頁</a>
+                </li>
+
+
+
+            </ul>
+
+
+        </nav>
+
+
+
+        <div id="content">
+            <!-- <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button> -->
+            <button class="btn d-lg-none" id="sidebarCollapse" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <!-- <i class="fas fa-align-justify"></i> -->
+                            <span></span>
+                        <span></span>
+                        <span></span>
+                        </button>
+            <br><br>
+            <div class="container">
+                <div class="row">
+                    <main class="col-md-9">
+                        
+<div class="bg-white border p-4 mb-2">
+    2019年1月10日<br>
+    <h3 class="mt-4 mb-2"><b>程式語言─課堂作業</b></h3>
+
+
+
+    <div>
+        <h2 id="prolog">Prolog</h2>
+<ul>
+<li>Prolog（Programming in Logic的縮寫）是一種邏輯編程語言</li>
+<li>由法國馬賽大學所設計出來的程式語言。</li>
+<li>以符號邏輯為基礎，且具有推理性的程式語言，在人工智慧的領域有很大貢獻。</li>
+</ul>
+<h2 id="prolog練習與整理">Prolog練習與整理</h2>
+<ol>
+<li>規則與事實(rules and facts)</li>
+<li>邏輯基底程式導向語言(邏輯導向程式語言) (logic-based programming language)</li>
+<li>常數<ol>
+<li>整數</li>
+<li>字元</li>
+<li>小寫字母為開頭</li>
+</ol>
+</li>
+<li>變數</li>
+<li>結構<ul>
+<li>格式：函數名稱(值1,值2,值3)</li>
+<li>值也可以是一個結構</li>
+<li>利用結構表示事實<ul>
+<li>學生fei就讀逢甲大學(fcu)</li>
+<li><code>student(fei,school(fcu))</code></li>
+<li>每一個值都可以是<strong><span style="text-decoration: underline;">結構</span></strong></li>
+<li><code>student(person(fei,girl),school(fcu,taichung))</code></li>
+<li>從上面的式子可以知道student、person、school都是<strong>結構</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>練習一</p>
+<ul>
+<li>
+<div style="background: #f8f8f8; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+
+<p><pre style="margin: 0; line-height: 125%;"><span style="color: #0000ff;">mother</span>(<span style="color: #ba2121;">ruby</span>, <span style="color: #ba2121;">tim</span>).<span style="color: #ba2121;">　　　　　　</span>     <span style="color: #408080; font-style: italic;">%ruby是tim的媽媽</span>
+<span style="color: #0000ff;">father</span>(<span style="color: #ba2121;">andy</span>, <span style="color: #ba2121;">ruby</span>).<span style="color: #ba2121;">　　　　　　</span>  　<span style="color: #408080; font-style: italic;">%andy是ruby的爸爸</span>
+<span style="color: #0000ff;">parent</span>(<span style="color: #19177c;">X</span>, <span style="color: #19177c;">Y</span>) :- <span style="color: #0000ff;">father</span>(<span style="color: #19177c;">X</span>, <span style="color: #19177c;">Y</span>).<span style="color: #ba2121;">　　</span> <span style="color: #408080; font-style: italic;">%parent(X,Y)條件須滿足father(X,Y)</span>
+<span style="color: #0000ff;">parent</span>(<span style="color: #19177c;">X</span>, <span style="color: #19177c;">Y</span>) :- <span style="color: #0000ff;">mother</span>(<span style="color: #19177c;">X</span>, <span style="color: #19177c;">Y</span>).     <span style="color: #408080; font-style: italic;">%parent(X,Y)條件須滿足mother(X,Y)</span></p>
+<p><span style="color: #408080; font-style: italic;">%grandparent函式輸入X,Z需同時滿足parent(X,Y)和parent(Y,Z)</span>
+<span style="color: #0000ff;">grandparent</span>(<span style="color: #19177c;">X</span>,<span style="color: #19177c;">Z</span>) :- <span style="color: #0000ff;">parent</span>(<span style="color: #19177c;">X</span>,<span style="color: #19177c;">Y</span>), <span style="color: #0000ff;">parent</span>(<span style="color: #19177c;">Y</span>,<span style="color: #19177c;">Z</span>).
+<span style="color: #000000;">-------------------------------------</span>
+<span style="color: #ba2121;">?-</span><span style="color: #0000ff;">grandparent</span>(<span style="color: #ba2121;">andy</span>,<span style="color: #ba2121;">tim</span>)
+<span style="color: #19177c;">True</span>
+</pre></p>
+</div>
+
+</li>
+</ul>
+</li>
+<li>
+<p>練習二</p>
+<ul>
+<li>
+<div style="background: #f8f8f8; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+
+<p><pre style="margin: 0; line-height: 125%;"><span style="color: #408080; font-style: italic;">% 速度(車種,數值)</span>
+<span style="color: #0000ff;">speed</span>(<span style="color: #ba2121;">toyota</span>, <span style="color: #666666;">100</span>).<br />
+<span style="color: #0000ff;">speed</span>(<span style="color: #ba2121;">honda</span>, <span style="color: #666666;">105</span>).
+<span style="color: #0000ff;">speed</span>(<span style="color: #ba2121;">benz</span>, <span style="color: #666666;">120</span>).
+<span style="color: #0000ff;">speed</span>(<span style="color: #ba2121;">mazda</span>,<span style="color: #666666;">110</span>).</p>
+<p><span style="color: #408080; font-style: italic;">% 花費時間(車種,數值)</span>
+<span style="color: #0000ff;">time</span>(<span style="color: #ba2121;">toyota</span>, <span style="color: #666666;">21</span>).
+<span style="color: #0000ff;">time</span>(<span style="color: #ba2121;">honda</span>, <span style="color: #666666;">22</span>).
+<span style="color: #0000ff;">time</span>(<span style="color: #ba2121;">benz</span>, <span style="color: #666666;">23</span>).
+<span style="color: #0000ff;">time</span>(<span style="color: #ba2121;">mazda</span>, <span style="color: #666666;">24</span>).</p>
+<p><span style="color: #408080; font-style: italic;">% 計算距離函式</span>
+<span style="color: #408080; font-style: italic;">% 找出X的速度以及花費時間</span>
+<span style="color: #408080; font-style: italic;">% 輸出Y為距離</span>
+<span style="color: #0000ff;">distance</span>(<span style="color: #19177c;">X</span>, <span style="color: #19177c;">Y</span>) :-<span style="color: #0000ff;">speed</span>(<span style="color: #19177c;">X</span>, <span style="color: #19177c;">Speed</span>), <span style="color: #0000ff;">time</span>(<span style="color: #19177c;">X</span>, <span style="color: #19177c;">Time</span>),<span style="color: #19177c;">Y</span> <span style="color: #666666;">is</span> <span style="color: #19177c;">Speed</span> <span style="color: #666666;">*</span> <span style="color: #19177c;">Time</span>.
+<span style="color: #ba2121;">-------------------------------------</span>
+<span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">distance</span>(<span style="color: #ba2121;">toyota</span>, <span style="color: #19177c;">Distance</span>).
+<span style="color: #19177c;">Distance</span> <span style="color: #666666;">=</span> <span style="color: #666666;">2100</span></p>
+<p><span style="color: #ba2121;">?-trace</span>, (<span style="color: #0000ff;">distance</span>(<span style="color: #ba2121;">toyota</span>, <span style="color: #19177c;">Distance</span>)).
+<span style="color: #19177c;">Call</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">distance</span>(<span style="color: #ba2121;">toyota</span>, <span style="color: #008000; font-weight: bold;"><em></span><span style="color: #666666;">12130</span>)
+ <span style="color: #19177c;">Call</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">speed</span>(<span style="color: #ba2121;">toyota</span>, <span style="color: #008000; font-weight: bold;"></em></span><span style="color: #666666;">12326</span>)
+ <span style="color: #19177c;">Exit</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">speed</span>(<span style="color: #ba2121;">toyota</span>, <span style="color: #666666;">100</span>)
+ <span style="color: #19177c;">Call</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">time</span>(<span style="color: #ba2121;">toyota</span>, <span style="color: #008000; font-weight: bold;"><em></span><span style="color: #666666;">12326</span>)
+ <span style="color: #19177c;">Exit</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">time</span>(<span style="color: #ba2121;">toyota</span>, <span style="color: #666666;">21</span>)
+ <span style="color: #19177c;">Call</span><span style="color: #ba2121;">:</span><span style="color: #008000; font-weight: bold;"></em></span><span style="color: #666666;">12130</span> <span style="color: #666666;">is</span> <span style="color: #666666;">100<em>21</span>
+ <span style="color: #19177c;">Exit</span><span style="color: #ba2121;">:</span><span style="color: #666666;">2100</span> <span style="color: #666666;">is</span> <span style="color: #666666;">100</em>21</span>
+<span style="color: #19177c;">Exit</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">distance</span>(<span style="color: #ba2121;">toyota</span>, <span style="color: #666666;">2100</span>)
+<span style="color: #19177c;">Distance</span> <span style="color: #666666;">=</span> <span style="color: #666666;">2100</span>
+</pre></p>
+</div>
+
+</li>
+</ul>
+</li>
+<li>
+<p>函式庫：list，List Manipulation(列表操作)</p>
+<ul>
+<li>
+<p>member(?Elem, ?List)  </p>
+<ul>
+<li>判斷元素是否在列表內</li>
+<li>
+<div style="background: #f8f8f8; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+
+<p><pre style="margin: 0; line-height: 125%;"><span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">member</span>(<span style="color: #ba2121;">a</span>,[<span style="color: #ba2121;">a</span>,<span style="color: #ba2121;">b</span>,<span style="color: #ba2121;">c</span>]). 
+<span style="color: #ba2121;">true<br />
+</span>
+<span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">member</span>(<span style="color: #0000ff;">list</span>(<span style="color: #ba2121;">a</span>,<span style="color: #ba2121;">b</span>,<span style="color: #ba2121;">c</span>),[<span style="color: #ba2121;">t</span>,<span style="color: #ba2121;">e</span>,<span style="color: #ba2121;">v</span>,<span style="color: #0000ff;">list</span>(<span style="color: #ba2121;">a</span>,<span style="color: #ba2121;">b</span>,<span style="color: #ba2121;">c</span>),<span style="color: #ba2121;">d</span>]).
+<span style="color: #ba2121;">true</span>
+</pre></p>
+</div>
+
+</li>
+</ul>
+</li>
+<li>
+<p>length(?List, ?Int)  </p>
+<ul>
+<li>回傳列表長度</li>
+<li>第2個參數<ul>
+<li>如果是變數，將變數綁定為列表參數</li>
+<li>如果是數字，就將該數字與長度比較，相等則True，否則False。</li>
+</ul>
+</li>
+<li><div style="background: #f8f8f8; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+    <pre style="margin: 0; line-height: 125%;"><span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">length</span>([<span style="color: #ba2121;">a</span>,<span style="color: #ba2121;">b</span>,<span style="color: #ba2121;">c</span>,<span style="color: #ba2121;">d</span>],<span style="color: #19177c;">X</span>). 
+    <span style="color: #19177c;">X</span> <span style="color: #666666;">=</span> <span style="color: #666666;">4<br />
+    </span>
+    <span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">length</span>([<span style="color: #ba2121;">a</span>,<span style="color: #ba2121;">b</span>,<span style="color: #ba2121;">c</span>],<span style="color: #666666;">3</span>). 
+    <span style="color: #ba2121;">true<br />
+    </span>
+    <span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">length</span>([<span style="color: #ba2121;">a</span>,<span style="color: #ba2121;">b</span>,<span style="color: #ba2121;">c</span>],<span style="color: #666666;">4</span>). 
+    <span style="color: #ba2121;">false</span>
+    </pre>
+    </div></li>
+</ul>
+</li>
+<li>
+<p>reverse(?List1, ?List2)  </p>
+<ul>
+<li>如果兩個變數都是list，就判斷是否互相倒序</li>
+<li>如果一個是變數，一個是list，就將變數綁定為list的倒序</li>
+<li>
+<p><div style="background: #f8f8f8; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+    <pre style="margin: 0; line-height: 125%;"><span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">reverse</span>([<span style="color: #666666;">1</span>,<span style="color: #666666;">2</span>,<span style="color: #666666;">3</span>,<span style="color: #666666;">4</span>],<span style="color: #19177c;">L</span>). 
+    <span style="color: #19177c;">L</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">4</span>,<span style="color: #666666;">3</span>,<span style="color: #666666;">2</span>,<span style="color: #666666;">1</span>] <br />
+    <span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">reverse</span>(<span style="color: #19177c;">L</span>,[<span style="color: #666666;">1</span>,<span style="color: #666666;">2</span>,<span style="color: #666666;">3</span>,<span style="color: #666666;">4</span>]). 
+    <span style="color: #19177c;">L</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">4</span>, <span style="color: #666666;">3</span>,<span style="color: #666666;">2</span>,<span style="color: #666666;">1</span>]<br />
+    <span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">reverse</span>([<span style="color: #666666;">1</span>,<span style="color: #666666;">2</span>,<span style="color: #666666;">3</span>,<span style="color: #666666;">4</span>],[<span style="color: #666666;">4</span>,<span style="color: #666666;">3</span>,<span style="color: #666666;">2</span>,<span style="color: #666666;">1</span>]). 
+    <span style="color: #ba2121;">true</span>
+    </pre></p>
+</div>
+
+</li>
+</ul>
+</li>
+<li>
+<p>append(?List1, ?List2, ?List1AndList2)  </p>
+<ul>
+<li>如果前兩個是list，第三個為變數，那麼將變數綁定為兩個list合併連接的列表</li>
+<li>如果前兩個參數包括變量，第三個是列表，那麼將回溯尋找所有可能的列表組合
+<div style="background: #f8f8f8; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;"><span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">append</span>([<span style="color: #666666;">1</span>,<span style="color: #666666;">2</span>,<span style="color: #666666;">3</span>,<span style="color: #666666;">4</span>],[<span style="color: #666666;">5</span>,<span style="color: #666666;">6</span>,<span style="color: #666666;">7</span>,<span style="color: #666666;">8</span>,<span style="color: #666666;">9</span>],<span style="color: #19177c;">L</span>).
+<span style="color: #19177c;">L</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">1</span>, <span style="color: #666666;">2</span>, <span style="color: #666666;">3</span>, <span style="color: #666666;">4</span>, <span style="color: #666666;">5</span>, <span style="color: #666666;">6</span>, <span style="color: #666666;">7</span>, <span style="color: #666666;">8</span>, <span style="color: #666666;">9</span>]
+<span style="color: #408080; font-style: italic;">% 列出L1,L2所有排列組合</span>
+<span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">append</span>(<span style="color: #19177c;">L1</span>,<span style="color: #19177c;">L2</span>,[<span style="color: #666666;">1</span>,<span style="color: #666666;">2</span>,<span style="color: #666666;">3</span>,<span style="color: #666666;">4</span>,<span style="color: #666666;">5</span>]).
+<span style="color: #19177c;">L1</span> <span style="color: #666666;">=</span> [],
+<span style="color: #19177c;">L2</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">1</span>, <span style="color: #666666;">2</span>, <span style="color: #666666;">3</span>, <span style="color: #666666;">4</span>, <span style="color: #666666;">5</span>]
+<span style="color: #19177c;">L1</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">1</span>],
+<span style="color: #19177c;">L2</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">2</span>, <span style="color: #666666;">3</span>, <span style="color: #666666;">4</span>, <span style="color: #666666;">5</span>]
+<span style="color: #19177c;">L1</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">1</span>, <span style="color: #666666;">2</span>],
+<span style="color: #19177c;">L2</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">3</span>, <span style="color: #666666;">4</span>, <span style="color: #666666;">5</span>]
+<span style="color: #19177c;">L1</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">1</span>, <span style="color: #666666;">2</span>, <span style="color: #666666;">3</span>],
+<span style="color: #19177c;">L2</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">4</span>, <span style="color: #666666;">5</span>]
+<span style="color: #19177c;">L1</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">1</span>, <span style="color: #666666;">2</span>, <span style="color: #666666;">3</span>, <span style="color: #666666;">4</span>],
+<span style="color: #19177c;">L2</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">5</span>]
+<span style="color: #19177c;">L1</span> <span style="color: #666666;">=</span> [<span style="color: #666666;">1</span>, <span style="color: #666666;">2</span>, <span style="color: #666666;">3</span>, <span style="color: #666666;">4</span>, <span style="color: #666666;">5</span>],
+<span style="color: #19177c;">L2</span> <span style="color: #666666;">=</span> []</pre>
+</div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="prolog-deficiencies心得報告">Prolog Deficiencies心得報告</h2>
+<ol>
+<li>Prolog對新手來說相當困難，跟C語言等語言的思考模式較不相同。</li>
+<li>Prolog比較抽象，編譯器很難加以優化。</li>
+<li>Prolog並不直觀，執行效率差。</li>
+<li>Prolog是處理符號和非數值運算之程式語言，因此對於數值運算無法解決"</li>
+</ol>
+<h2 id="prolog-期中考題目">Prolog 期中考題目</h2>
+<div style="background: #f8f8f8; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+
+<pre style="margin: 0; line-height: 125%;"><span style="color: #408080; font-style: italic;">% 判斷參數是否為列表內的第一個元素</span>
+<span style="color: #408080; font-style: italic;">% 如果不是第一個元素，查看列表其他元素</span>
+<span style="color: #408080; font-style: italic;">% 取出第一個元素後，剩下的元素成新的列表</span>
+<span style="color: #408080; font-style: italic;">% 依序查看參數是否為列表內的第一個元素</span>
+<span style="color: #0000ff;">member</span>(<span style="color: #19177c;">E</span>, [<span style="color: #19177c;">E</span>|<span style="color: #008000; font-weight: bold;">_</span>]) :- !.
+<span style="color: #0000ff;">member</span>(<span style="color: #19177c;">E</span>, [<span style="color: #008000; font-weight: bold;">_</span>|<span style="color: #19177c;">List</span>]) :- <span style="color: #0000ff;">member</span>(<span style="color: #19177c;">E</span>, <span style="color: #19177c;">List</span>).
+
+<span style="color: #ba2121;">---------------------</span>
+<span style="color: #ba2121;">?-</span> <span style="color: #0000ff;">member</span>(<span style="color: #ba2121;">a</span>, [<span style="color: #ba2121;">b</span>,<span style="color: #ba2121;">c</span>,<span style="color: #ba2121;">a</span>,<span style="color: #ba2121;">d</span>]).
+<span style="color: #ba2121;">true</span>
+
+<span style="color: #ba2121;">?-</span> <span style="color: #ba2121;">trace</span>, (<span style="color: #0000ff;">member</span>(<span style="color: #ba2121;">a</span>, [<span style="color: #ba2121;">b</span>,<span style="color: #ba2121;">c</span>,<span style="color: #ba2121;">a</span>,<span style="color: #ba2121;">d</span>])).
+<span style="color: #19177c;">Call</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">member</span>(<span style="color: #ba2121;">a</span>, [<span style="color: #ba2121;">b</span>, <span style="color: #ba2121;">c</span>, <span style="color: #ba2121;">a</span>, <span style="color: #ba2121;">d</span>])    <span style="color: #408080; font-style: italic;">% 因a不等於b，因此查看下一個元素</span>
+ <span style="color: #19177c;">Call</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">member</span>(<span style="color: #ba2121;">a</span>, [<span style="color: #ba2121;">c</span>, <span style="color: #ba2121;">a</span>, <span style="color: #ba2121;">d</span>])      <span style="color: #408080; font-style: italic;">% 因a不等於c，因此查看下一個元素</span>
+  <span style="color: #19177c;">Call</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">member</span>(<span style="color: #ba2121;">a</span>, [<span style="color: #ba2121;">a</span>, <span style="color: #ba2121;">d</span>])        <span style="color: #408080; font-style: italic;">% 因a等於a，因此結束呼叫</span>
+  <span style="color: #19177c;">Exit</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">member</span>(<span style="color: #ba2121;">a</span>, [<span style="color: #ba2121;">a</span>, <span style="color: #ba2121;">d</span>])        <span style="color: #408080; font-style: italic;">% 因已找到a，因此結束呼叫</span>
+ <span style="color: #19177c;">Exit</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">member</span>(<span style="color: #ba2121;">a</span>, [<span style="color: #ba2121;">c</span>, <span style="color: #ba2121;">a</span>, <span style="color: #ba2121;">d</span>])      <span style="color: #408080; font-style: italic;">% 因已找到a，因此結束呼叫</span>
+<span style="color: #19177c;">Exit</span><span style="color: #ba2121;">:</span><span style="color: #0000ff;">member</span>(<span style="color: #ba2121;">a</span>, [<span style="color: #ba2121;">b</span>, <span style="color: #ba2121;">c</span>, <span style="color: #ba2121;">a</span>, <span style="color: #ba2121;">d</span>])    <span style="color: #408080; font-style: italic;">% 因已找到a，因此結束呼叫</span>
+<span style="color: #ba2121;">true</span>                            <span style="color: #408080; font-style: italic;">% 因已找到a，故為true</span>
+</pre>
+
+</div>
+
+<h2 id="lisp">Lisp</h2>
+<ul>
+<li>舉一個例子，寫一個函數來回傳小於 n 的數字總和，用Lisp和C來比較
+<pre>; Lisp                   /<em> C </em>/
+(defun sum (n)           int sum(int n){
+  (let ((s 0))             int i, s = 0;
+    (dotimes (i n s)       for(i = 0; i &lt; n; i++)
+      (incf s i))))          s += i;
+                           return(s);
+                         }
+                         </pre></li>
+</ul>
+<h2 id="lisp-練習">Lisp 練習</h2>
+<h3 id="輸出練習">輸出練習</h3>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+
+<pre style="margin: 0; line-height: 125%;">(<span style="color: #00aa00;">write-line</span> <span style="color: #aa5500;">"Hello World"</span>) <span style="color: #aaaaaa; font-style: italic;">;輸出Hello World</span>
+(<span style="color: #00aaaa;">write</span> (<span style="color: #00aaaa;">+</span> <span style="color: #009999;">7</span> <span style="color: #009999;">9</span> <span style="color: #009999;">11</span>))<span style="color: #aaaaaa; font-style: italic;">;輸出11+7+9=27</span>
+</pre>
+
+</div>
+
+<h3 id="使用前綴符號">使用前綴符號</h3>
+<ul>
+<li>比如說：a * ( b + c ) / d</li>
+<li>在Lisp語言內要寫：(/ (* a (+ b c) ) d)</li>
+</ul>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;">(<span style="color: #00aa00;">write</span>(<span style="color: #00aaaa;">+</span> (<span style="color: #00aaaa;">*</span> (<span style="color: #00aaaa;">/</span> <span style="color: #009999;">9</span> <span style="color: #009999;">5</span>) <span style="color: #009999;">60</span>) <span style="color: #009999;">32</span>))<span style="color: #aaaaaa; font-style: italic;">;輸出(60*9/5)+32=140</span>
+</pre>
+</div>
+
+<h2 id="lisp期中考">Lisp期中考</h2>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+
+<pre style="margin: 0; line-height: 125%;">(<span style="color: #bb0066; font-weight: bold;">DEFINE</span> (compose f g)            % 接受 f 和 g 函數.
+(<span style="color: #bb0066; font-weight: bold;">LAMBDA</span> (x) (f (g x)))) ,       % 將 f ( g x) 設為一個匿名函數.
+((compose <span style="color: #bb0066; font-weight: bold;">CAR</span> <span style="color: #bb0066; font-weight: bold;">CDR</span>) <span style="color: #a61717; background-color: #e3d2d2;">'</span>(a b c)) ,      % 將資料 (a b c) 透過 (compose f g) 轉為 (<span style="color: #bb0066; font-weight: bold;">LAMBDA</span> (c) (a (b c))) .
+((<span style="color: #bb0066; font-weight: bold;">DEFINE</span> (adder alist)          % 定義 (adder alist) 為以下的判斷式.
+(<span style="color: #bb0066; font-weight: bold;">COND</span> ((<span style="color: #bb0066; font-weight: bold;">NULL</span>?alist) <span style="color: #0000dd; font-weight: bold;">0</span>)          % alist 若為為空<span style="color: #a61717; background-color: #e3d2d2;">，</span>則回傳 <span style="color: #0000dd; font-weight: bold;">0</span> .
+(<span style="color: #bb0066; font-weight: bold;">ELSE</span> (<span style="color: #bb0066; font-weight: bold;">EVAL</span> (<span style="color: #bb0066; font-weight: bold;">CONS</span>  <span style="color: #a61717; background-color: #e3d2d2;">'</span>+ alist))))) ,  % 否則將 alist 的所有內容加總.
+                    % (使用cons把 <span style="color: #dd2200; background-color: #fff0f0;">""+""</span> 和 <span style="color: #dd2200; background-color: #fff0f0;">""alist""</span> 合併為 <span style="color: #dd2200; background-color: #fff0f0;">""+ alist""</span> ,再使用 eval 將 <span style="color: #dd2200; background-color: #fff0f0;">""+ alist""</span> 從資料型態轉成函數.)
+(adder  <span style="color: #a61717; background-color: #e3d2d2;">'</span>(<span style="color: #0000dd; font-weight: bold;">3</span> <span style="color: #0000dd; font-weight: bold;">4</span> <span style="color: #0000dd; font-weight: bold;">5</span> <span style="color: #0000dd; font-weight: bold;">6</span> <span style="color: #0000dd; font-weight: bold;">2</span>)) ?         % 判斷 alist 是否為零,若非為零則將 alist 加總,再回傳計算過後的結果.
+</pre>
+
+</div>
+
+<h2 id="erlang">Erlang</h2>
+<blockquote>
+<p>Erlang is a general-purpose concurrent programming language and runtime system. The sequential subset of Erlang is a functional language, with strict evaluation, single assignment, and dynamic typing. ~維基百科</p>
+</blockquote>
+<ol>
+<li>Erlang有許多近似Pure Functional Language的特性</li>
+<li>優點<ul>
+<li>建構並行(Concurrent)</li>
+<li>分散(Distributed)</li>
+<li>容錯 (Fault-tolerance)的系統</li>
+</ul>
+</li>
+<li>缺點<ul>
+<li>內建函式庫的貧乏</li>
+<li>對Unicode支援度低</li>
+<li>缺乏良好的IDE及Debug Tool</li>
+</ul>
+</li>
+</ol>
+<h2 id="java-exception-and-event-handling">Java (Exception and Event Handling)</h2>
+<ul>
+<li>例外(Exception)：任何不正常的事件，不論是否有錯誤，都可以通過硬體或軟體檢測到，並且可能需要特殊處理。</li>
+<li>異常處理程序(Exception handler)：處理異常的程式碼單元。</li>
+<li>引發異常(Raising an exception)：發生與異常相關的事件時。</li>
+<li>禁用異常(Disabling an exception)：忽略某些硬體可檢測的異常。</li>
+<li>繼續(Continuation)：控製程序程式碼或程序之外的程序中的某處可能會終止。</li>
+<li>完成(Finalization)：無論子程序如何停止，都可以完成一些運行。</li>
+<li>內置異常(Built-in exception)：不是由使用者做出的異常，而是默認的。</li>
+</ul>
+<p>Java提供了豐富的異常處理機制，與C語言相同，Java的異常處理也是包含在try, catch, finally三個塊中的，常見的異常處理方式如下：</p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+
+<pre style="margin: 0; line-height: 125%;"><span style="color: #008800; font-weight: bold;">try</span>{
+    <span style="color: #888888;">// code 可能會產生異常</span>
+} <span style="color: #008800; font-weight: bold;">catch</span>(IOException e){
+    <span style="color: #888888;">// IOException輸入輸出異常，當產生異常被偵測之後，catch內的code會被執行</span>
+} <span style="color: #008800; font-weight: bold;">finally</span> {
+    <span style="color: #888888;">// 無論是否有異常，這裡的code都會執行</span>
+}</pre>
+
+</div>
+
+<p><img alt="Throwable繼承架構圖" src="https://openhome.cc/Gossip/Java/images/ThrowableHierarchy-2.PNG" />(圖轉載至<a href="https://openhome.cc/Gossip/Java/ThrowableHierarchy.html">openhome</a>)<br />
+Java的異常處理程序與C ++的異常處理程序具有相同的形式，只是每個catch必須有一個參數，這個參數均應是java.lang.Throwable的子類別。其中，主要分為兩大子類別:</p>
+<ol>
+<li>java.lang.Error: 其子類別表示了Java虛擬機的異常</li>
+<li>java.lang.Exception: 其子類別表示了程序運行中的異常</li>
+</ol>
+<p>Exception的子類還可以分為兩類：</p>
+<ol>
+<li>java.lang.RuntimeException: 其子類表示了運行中的異常，該異常可以不被catch，編譯器也能通過。該子類表示的異常，均應該在原始碼中避免，比如數組範圍的超出等等。</li>
+<li>非RuntimeException: 其子類表示了程序中不可避免的異常，如文件不存在的FileNotFoundException異常，該異常必須被catch掉或者是在函數頭處聲明。</li>
+</ol>
+<p>finally子句放在完整的try結構之後的處理程序列表的末尾。這個結構的語義如下：</p>
+<ol>
+<li>如果try子句不引發異常，finally子句在try結構之後繼續執行之前被執行。</li>
+<li>如果try子句拋出一個異常，並被後面的處理程序捕獲，finally子句在處理程序完成執行後執行。</li>
+<li>如果try子句拋出一個異常，但是它並沒有被try結構之後的處理程序捕獲，finally子句在異常傳播之前被執行。</li>
+</ol>
+<p>如果在程式當中需要拋出異常，應使用<strong>throw</strong>關鍵字：  </p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+
+<pre style="margin: 0; line-height: 125%;"><span style="color: #008800; font-weight: bold;">if</span>(!file.<span style="color: #336699;">exists</span>()) {
+    <span style="color: #008800; font-weight: bold;">throw</span> <span style="color: #008800; font-weight: bold;">new</span> <span style="color: #0066bb; font-weight: bold;">FileNotFoundException</span>(<span style="color: #dd2200; background-color: #fff0f0;">""檔案不存在""</span>);
+}
+</pre>
+
+</div>
+
+<p>如果是方法(method)裡拋出異常，應使用關鍵字<strong>throws</strong>：  </p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+
+<pre style="margin: 0; line-height: 125%;"><span style="color: #008800; font-weight: bold;">public</span> <span style="color: #888888; font-weight: bold;">void</span> <span style="color: #0066bb; font-weight: bold;">get</span>() <span style="color: #008800; font-weight: bold;">throws</span> Exception{
+}
+</pre>
+
+</div>
+
+<h2 id="java-concurrency">Java (Concurrency)</h2>
+<p>平行(Parallelism)與併行(Concurrency)的差別如下：</p>
+<ul>
+<li>多個任務分配到一個CPU核心，在取得的CPU時間片段中交互執行，稱之為併行(Concurrency)。</li>
+<li>一個任務可被分成多個子任務並分配到不同的CPU核心同時執行，稱之為平行(Parallelism)。</li>
+</ul>
+<p>平行與併行的講解：</p>
+<ol>
+<li>Concurrency：多個任務(tasks)同時處理。而併行的相反則為序列化處理，也就是要等一件任務完成才能開始執行另外一件任務。</li>
+<li>Parallelism：一個任務分拆為數個子任務來同時執行。</li>
+</ol>
+<p>平行和併行是分別獨立的概念，彼此並沒有依賴關係，有平行不一定有併行，反之亦然。</p>
+<p><strong>簡單舉例</strong></p>
+<div style="background: #ffffff; overflow: auto; width: auto; border: solid gray; border-width: .1em .1em .1em .8em; padding: .2em .6em;">
+<pre style="margin: 0; line-height: 125%;">(支援Concurrency)你吃飯吃到一半，電話來了，你停了下來接了電話，接完後繼續吃飯，這說明你支持Concurrency。
+(支援Parallelism)你吃飯吃到一半，電話來了，你一邊打電話一邊吃飯，這說明你支持Parallelism。
+(都不支援)你吃飯吃到一半，電話來了，你一直到吃完了以後才去接，這就說明你不支持Parallelism也不支持Concurrency。
+</pre>
+</div>
+        <div class="widget-tag-cloud mt-4">
+            分類：<a href="/blog/category/1/">程式語言</a><br> 標籤： <a href="/blog/tag/1/"><button class="btn btn-sm btn btn-light">#程式語言 </button></a> <br>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //document.getElementsByTagName("img").classList.add("img-responsive");
+    var elm = document.getElementsByTagName('img')
+    var length = elm.length;
+    for (var i = 0; i < length; i++) {
+        elm[i].className = elm[i].className + " img-fluid";
+    }
+    //$("img").addClass('img-responsive');
+    //$(".x_content table").addClass('table table-striped table-bordered table-responsive');
+</script>
+
+                    </main>
+
+                    <div class="col-md-3 d-none d-xl-block">
+                        
+<div class="widget widget-content sticky-top">
+    <h3 class="widget-title">本篇大綱</h3>
+    <div class="toc">
+<ul>
+<li><a href="#prolog">Prolog</a></li>
+<li><a href="#prolog練習與整理">Prolog練習與整理</a></li>
+<li><a href="#prolog-deficiencies心得報告">Prolog Deficiencies心得報告</a></li>
+<li><a href="#prolog-期中考題目">Prolog 期中考題目</a></li>
+<li><a href="#lisp">Lisp</a></li>
+<li><a href="#lisp-練習">Lisp 練習</a><ul>
+<li><a href="#輸出練習">輸出練習</a></li>
+<li><a href="#使用前綴符號">使用前綴符號</a></li>
+</ul>
+</li>
+<li><a href="#lisp期中考">Lisp期中考</a></li>
+<li><a href="#erlang">Erlang</a></li>
+<li><a href="#java-exception-and-event-handling">Java (Exception and Event Handling)</a></li>
+<li><a href="#java-concurrency">Java (Concurrency)</a></li>
+</ul>
+</div>
+
+</div>
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- <footer id="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="copyright">&copy 2019 - 飛飛
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
