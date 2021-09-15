@@ -355,6 +355,11 @@
 
     <!-- Custom scripts for this template -->
     <script src="static/js/resume.min.js"></script>
+    <script>
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+    console.log(params);
+    </script>
 
 </body>
 
