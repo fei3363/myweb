@@ -1,37 +1,35 @@
-
 <!DOCTYPE html>
-
-
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>飛飛 林子婷 | 資安專家 · OSCE3 · 七維思執行長</title>
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="飛飛（林子婷）- 資安專家、七維思股份有限公司執行長。擁有 OSCE3、OSCP 等專業證照，專精滲透測試、網站安全、物聯網安全。提供企業資安培訓、紅隊演練與資安顧問服務。">
     <meta name="keywords" content="飛飛, 林子婷, 資安, 滲透測試, OSCE3, OSCP, 七維思, 資安講師, 網站安全, 紅隊演練, HITCON, 資安顧問">
     <meta name="author" content="林子婷 (飛飛)">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://feifei.com.tw/">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://feifei.com.tw/">
     <meta property="og:title" content="飛飛 林子婷 | 資安專家 · OSCE3 · 七維思執行長">
     <meta property="og:description" content="資安專家、七維思執行長。擁有 OSCE3、OSCP 等專業證照，專精滲透測試、網站安全、物聯網安全。提供企業資安培訓與顧問服務。">
-    <meta property="og:image" content="https://feifei.com.tw/static/img/profile.jpg">
+    <meta property="og:image" content="https://ccmsassets.ithome.com.tw/2023/4/10/977c5069-82a0-42a2-89cf-c7fcc72ef493.jpg">
     <meta property="og:locale" content="zh_TW">
     <meta property="og:site_name" content="飛飛 Feifei">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@fei3363">
     <meta name="twitter:creator" content="@fei3363">
     <meta name="twitter:title" content="飛飛 林子婷 | 資安專家 · OSCE3 · 七維思執行長">
     <meta name="twitter:description" content="資安專家、七維思執行長。擁有 OSCE3、OSCP 等專業證照，專精滲透測試、網站安全、物聯網安全。">
-    <meta name="twitter:image" content="https://feifei.com.tw/static/img/profile.jpg">
-    
+    <meta name="twitter:image" content="https://ccmsassets.ithome.com.tw/2023/4/10/977c5069-82a0-42a2-89cf-c7fcc72ef493.jpg">
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -40,7 +38,7 @@
         "name": "林子婷",
         "alternateName": "飛飛",
         "url": "https://feifei.com.tw",
-        "image": "https://feifei.com.tw/static/img/profile.jpg",
+        "image": "https://ccmsassets.ithome.com.tw/2023/4/10/977c5069-82a0-42a2-89cf-c7fcc72ef493.jpg",
         "jobTitle": "執行長",
         "worksFor": {
             "@type": "Organization",
@@ -52,7 +50,7 @@
                 "name": "臺灣科技大學"
             },
             {
-                "@type": "CollegeOrUniversity", 
+                "@type": "CollegeOrUniversity",
                 "name": "逢甲大學"
             }
         ],
@@ -67,1242 +65,1167 @@
         ]
     }
     </script>
-	
+
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BTTSHMPBYZ"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
-	
 	  gtag('config', 'G-BTTSHMPBYZ');
 	</script>
 
-    <!-- css -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-
-    <!-- Custom styles for this template -->
-    <link href="static/css/resume.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Muli, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            padding-top: 54px;
-            color: #343a40;
-        }
-        
-        @media (min-width: 992px) {
-            body {
-                padding-top: 0;
-                padding-left: 17rem;
-            }
-        }
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', 'Noto Sans TC', sans-serif; }
 
-        h1, h2, h3, .h1, .h2, .h3 {
-            font-family: "Saira Extra Condensed", serif;
-            font-weight: 700;
-            color: #343a40;
-        }
+      /* Hide scrollbar for mobile menu */
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-        .subheading {
-            font-family: "Saira Extra Condensed", serif;
-            font-size: 1.35rem;
-            text-transform: uppercase;
-            font-weight: 500;
-            color: #868e96;
-        }
-
-        #sideNav {
-            background-color: #3d5170;
-        }
-
-        @media (min-width: 992px) {
-            #sideNav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                display: flex;
-                flex-direction: column;
-                width: 17rem;
-                height: 100vh;
-            }
-        }
-
-        .navbar-dark .navbar-nav .nav-link {
-            color: rgba(255, 255, 255, 0.75);
-        }
-
-        .resume-section {
-            padding: 6rem 3rem !important;
-            min-height: 100vh;
-        }
-
-        .tab {
-            padding: 8px 16px;
-            border: none;
-            background-color: #e2e8f0;
-            cursor: pointer;
-            border-radius: 4px;
-            margin: 4px;
-        }
-
-        .tab.active {
-            background-color: #3d5170;
-            color: white;
-        }
-
-        .content {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .content.active {
-            display: block;
-        }
-
-        table {
-            width: 100%;
-            margin-top: 1rem;
-        }
-
-        th, td {
-            padding: 12px;
-            border: 1px solid #dee2e6;
-        }
-
-        .social-icons a {
-            display: inline-block;
-            width: 3.5rem;
-            height: 3.5rem;
-            color: #fff !important;
-            border-radius: 100%;
-            text-align: center;
-            font-size: 1.5rem;
-            line-height: 3.5rem;
-            margin-right: 1rem;
-        }
-
-        .social-icons a:hover {
-            background-color: #4d6180;
-        }
-
-        .dev-icons {
-            font-size: 3rem;
-        }
+      /* Custom details marker */
+      details summary::-webkit-details-marker { display: none; }
+      details summary { list-style: none; }
     </style>
 </head>
 
-<body id="page-top">
+<body class="bg-gray-50 text-gray-900">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Meow</span>
-            <span class="d-none d-lg-block">
-                飛飛<br>
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/static/img/profile.jpg" alt="">
-        </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">關於</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#experience">經歷</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#certifications">證照</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#education">學歷</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#skills">技能</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#interests">演講/授課紀錄</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#awards">榮譽事蹟</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="/blog/">修課心得/作業內容</a>
-                </li>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#" class="font-bold text-xl text-gray-900 hover:text-blue-600 transition-colors">飛飛</a>
 
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="#about" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">關於</a>
+                    <a href="#experience" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">經歷</a>
+                    <a href="#certifications" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">證照</a>
+                    <a href="#education" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">學歷</a>
+                    <a href="#skills" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">技能</a>
+                    <a href="#speaking" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">演講</a>
+                    <a href="#awards" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">榮譽</a>
+                    <a href="/blog/" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">心得</a>
+                </div>
 
-            </ul>
+                <!-- Mobile menu button -->
+                <button id="menu-toggle" class="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-3 space-y-1">
+                <a href="#about" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">關於</a>
+                <a href="#experience" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">經歷</a>
+                <a href="#certifications" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">證照</a>
+                <a href="#education" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">學歷</a>
+                <a href="#skills" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">技能</a>
+                <a href="#speaking" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">演講與授課紀錄</a>
+                <a href="#awards" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">榮譽事蹟</a>
+                <a href="/blog/" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">修課心得</a>
+            </div>
         </div>
     </nav>
 
-    <div class="container-fluid p-0">
+    <!-- Main Content -->
+    <main class="pt-16">
 
-        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
-            <div class="my-auto">
-                <h1 class="mb-0">林子婷/飛飛
-                </h1>
+        <!-- About Section -->
+        <section id="about" class="min-h-screen flex items-center py-16 md:py-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                    <!-- Profile Image -->
+                    <div class="flex-shrink-0">
+                        <img src="https://ccmsassets.ithome.com.tw/2023/4/10/977c5069-82a0-42a2-89cf-c7fcc72ef493.jpg" alt="飛飛 林子婷" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg ring-4 ring-white">
+                    </div>
 
-                <p class="lead mb-5"></p>
-                <div class="social-icons">
-                    <a href="https://feifei.tw/">
-                        <i class="fab fa-wordpress"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/feifei3363">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/fei3363">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://twitter.com/fei3363">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://fb.me/fei3363">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://medium.com/@feifei3363">
-                        <i class="fab fa-medium"></i>
-                    </a>
-                    <a href="/blog/">
-                        <i class="fas fa-blog"></i>
-                    </a>
-                    <a href="https://www.books.com.tw/products/0010906898">
-                        <i class="fas fa-book"></i>
-                    </a>
+                    <!-- Bio -->
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">林子婷</h1>
+                        <p class="text-2xl md:text-3xl text-blue-600 font-medium mb-4">飛飛</p>
+                        <p class="text-lg text-gray-600 mb-6">資安專家 · OSCE3 · 七維思執行長</p>
+
+                        <!-- Social Icons -->
+                        <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                            <a href="https://feifei.tw/" target="_blank" rel="noopener" class="w-11 h-11 flex items-center justify-center bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" title="WordPress Blog">
+                                <i class="fab fa-wordpress text-lg"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/feifei3363" target="_blank" rel="noopener" class="w-11 h-11 flex items-center justify-center bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" title="LinkedIn">
+                                <i class="fab fa-linkedin-in text-lg"></i>
+                            </a>
+                            <a href="https://github.com/fei3363" target="_blank" rel="noopener" class="w-11 h-11 flex items-center justify-center bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" title="GitHub">
+                                <i class="fab fa-github text-lg"></i>
+                            </a>
+                            <a href="https://twitter.com/fei3363" target="_blank" rel="noopener" class="w-11 h-11 flex items-center justify-center bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" title="Twitter">
+                                <i class="fab fa-twitter text-lg"></i>
+                            </a>
+                            <a href="https://fb.me/fei3363" target="_blank" rel="noopener" class="w-11 h-11 flex items-center justify-center bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" title="Facebook">
+                                <i class="fab fa-facebook-f text-lg"></i>
+                            </a>
+                            <a href="https://medium.com/@feifei3363" target="_blank" rel="noopener" class="w-11 h-11 flex items-center justify-center bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" title="Medium">
+                                <i class="fab fa-medium text-lg"></i>
+                            </a>
+                            <a href="/blog/" class="w-11 h-11 flex items-center justify-center bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" title="Blog">
+                                <i class="fas fa-blog text-lg"></i>
+                            </a>
+                            <a href="https://www.books.com.tw/products/0010906898" target="_blank" rel="noopener" class="w-11 h-11 flex items-center justify-center bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" title="Book">
+                                <i class="fas fa-book text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 md:py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12">經歷</h2>
+
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="absolute left-0 md:left-24 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+
+                    <!-- Experience 1: 執行長 -->
+                    <div class="relative pl-8 md:pl-32 pb-12">
+                        <div class="absolute left-0 top-0 hidden md:block w-20 text-right">
+                            <span class="text-sm font-semibold text-gray-500">2022/08</span>
+                            <span class="text-xs text-gray-400 block">至今</span>
+                        </div>
+                        <div class="absolute left-[-5px] md:left-[91px] top-1.5 w-3 h-3 bg-blue-600 rounded-full ring-4 ring-white"></div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                            <span class="md:hidden inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded mb-3">2022/08 - 至今</span>
+                            <h3 class="text-lg font-bold text-gray-900">執行長</h3>
+                            <p class="text-blue-600 font-medium mb-3">七維思股份有限公司</p>
+                            <details class="group">
+                                <summary class="cursor-pointer text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1">
+                                    <span>查看工作內容</span>
+                                    <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>企業資安測試實戰培訓課程設計與教學</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>攻防技術研究與教材開發</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>企業資安防護解決方案諮詢</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>資安檢測工具開發與維護</span></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2: WEBPT 組長 -->
+                    <div class="relative pl-8 md:pl-32 pb-12">
+                        <div class="absolute left-0 top-0 hidden md:block w-20 text-right">
+                            <span class="text-sm font-semibold text-gray-500">2019</span>
+                            <span class="text-xs text-gray-400 block">至今</span>
+                        </div>
+                        <div class="absolute left-[-5px] md:left-[91px] top-1.5 w-3 h-3 bg-blue-600 rounded-full ring-4 ring-white"></div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                            <span class="md:hidden inline-block px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded mb-3">2019 - 至今</span>
+                            <h3 class="text-lg font-bold text-gray-900">WEBPT 組長</h3>
+                            <p class="text-blue-600 font-medium mb-3">HITCON GIRLS</p>
+                            <details class="group">
+                                <summary class="cursor-pointer text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1">
+                                    <span>查看工作內容</span>
+                                    <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>指導 WEBPT 相關知識與技術</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>規劃 WEBPT 課程內容</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>組織活動與讀書會管理</span></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3: 社長/資安講師 -->
+                    <div class="relative pl-8 md:pl-32 pb-12">
+                        <div class="absolute left-0 top-0 hidden md:block w-20 text-right">
+                            <span class="text-sm font-semibold text-gray-500">2021/07</span>
+                            <span class="text-xs text-gray-400 block">2022/06</span>
+                        </div>
+                        <div class="absolute left-[-5px] md:left-[91px] top-1.5 w-3 h-3 bg-blue-600 rounded-full ring-4 ring-white"></div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                            <span class="md:hidden inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded mb-3">2021/07 - 2022/06</span>
+                            <h3 class="text-lg font-bold text-gray-900">第七屆 + 第八屆 社長/資安講師</h3>
+                            <p class="text-blue-600 font-medium mb-3">臺灣科技大學資安研究社</p>
+                            <details class="group">
+                                <summary class="cursor-pointer text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1">
+                                    <span>查看工作內容</span>
+                                    <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>社團年度計畫規劃與執行</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>資安實務課程設計與教學</span></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Experience 4: 資安顧問 -->
+                    <div class="relative pl-8 md:pl-32 pb-12">
+                        <div class="absolute left-0 top-0 hidden md:block w-20 text-right">
+                            <span class="text-sm font-semibold text-gray-500">2019/09</span>
+                            <span class="text-xs text-gray-400 block">2022/01</span>
+                        </div>
+                        <div class="absolute left-[-5px] md:left-[91px] top-1.5 w-3 h-3 bg-blue-600 rounded-full ring-4 ring-white"></div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                            <span class="md:hidden inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded mb-3">2019/09 - 2022/01</span>
+                            <h3 class="text-lg font-bold text-gray-900">資安顧問</h3>
+                            <p class="text-blue-600 font-medium mb-3">盧氪賽忒股份有限公司（Leukocyte-Lab）</p>
+                            <details class="group">
+                                <summary class="cursor-pointer text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1">
+                                    <span>查看工作內容</span>
+                                    <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>企業資安服務（弱點掃描、滲透測試、紅隊演練、資安訪談）</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>物聯網設備自動化檢測 ArgusHack-Carrier</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>物聯網設備漏洞挖掘</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>專案協調</span></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Experience 5: 資安工程師 -->
+                    <div class="relative pl-8 md:pl-32 pb-12">
+                        <div class="absolute left-0 top-0 hidden md:block w-20 text-right">
+                            <span class="text-sm font-semibold text-gray-500">2016/09</span>
+                            <span class="text-xs text-gray-400 block">2019/08</span>
+                        </div>
+                        <div class="absolute left-[-5px] md:left-[91px] top-1.5 w-3 h-3 bg-blue-600 rounded-full ring-4 ring-white"></div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                            <span class="md:hidden inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded mb-3">2016/09 - 2019/08</span>
+                            <h3 class="text-lg font-bold text-gray-900">資安工程師</h3>
+                            <p class="text-blue-600 font-medium mb-3">三甲科技股份有限公司</p>
+                            <details class="group">
+                                <summary class="cursor-pointer text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1">
+                                    <span>查看工作內容</span>
+                                    <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>資安資訊分析與分析平台建置與維護（Django）</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>科技部領域工程教育人才培育與研究計畫之網站開發及維護（Django）</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>協助執行主機弱點掃描與滲透測試服務</span></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Experience 6: 助理工程師 -->
+                    <div class="relative pl-8 md:pl-32 pb-12">
+                        <div class="absolute left-0 top-0 hidden md:block w-20 text-right">
+                            <span class="text-sm font-semibold text-gray-500">2016/09</span>
+                            <span class="text-xs text-gray-400 block">2019/08</span>
+                        </div>
+                        <div class="absolute left-[-5px] md:left-[91px] top-1.5 w-3 h-3 bg-blue-600 rounded-full ring-4 ring-white"></div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                            <span class="md:hidden inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded mb-3">2016/09 - 2019/08</span>
+                            <h3 class="text-lg font-bold text-gray-900">助理工程師</h3>
+                            <p class="text-blue-600 font-medium mb-3">逢甲大學資通安全研究中心</p>
+                            <details class="group">
+                                <summary class="cursor-pointer text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1">
+                                    <span>查看工作內容</span>
+                                    <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>企業資安服務（弱點掃描、滲透測試、雲端APP檢測、社交郵件工程服務）專案計畫執行團隊</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>科技公司主機弱點掃描服務專案</span></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Experience 7: 顧問/資安講師 (第五屆) -->
+                    <div class="relative pl-8 md:pl-32 pb-12">
+                        <div class="absolute left-0 top-0 hidden md:block w-20 text-right">
+                            <span class="text-sm font-semibold text-gray-500">2018/07</span>
+                            <span class="text-xs text-gray-400 block">2019/06</span>
+                        </div>
+                        <div class="absolute left-[-5px] md:left-[91px] top-1.5 w-3 h-3 bg-blue-600 rounded-full ring-4 ring-white"></div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                            <span class="md:hidden inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded mb-3">2018/07 - 2019/06</span>
+                            <h3 class="text-lg font-bold text-gray-900">顧問/資安講師</h3>
+                            <p class="text-blue-600 font-medium mb-3">逢甲大學黑客社第五屆</p>
+                            <details class="group">
+                                <summary class="cursor-pointer text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1">
+                                    <span>查看工作內容</span>
+                                    <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>資安課程規劃與教學指導</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>CTF 競賽培訓與技術指導</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>社團發展策略建議</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>跨校資安社團合作專案協調</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>資安實務經驗分享與職涯諮詢</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>企業資源與實習機會媒合</span></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+
+                    <!-- Experience 8: 社長/網管/資安講師 (第四屆) -->
+                    <div class="relative pl-8 md:pl-32">
+                        <div class="absolute left-0 top-0 hidden md:block w-20 text-right">
+                            <span class="text-sm font-semibold text-gray-500">2017/07</span>
+                            <span class="text-xs text-gray-400 block">2018/06</span>
+                        </div>
+                        <div class="absolute left-[-5px] md:left-[91px] top-1.5 w-3 h-3 bg-blue-600 rounded-full ring-4 ring-white"></div>
+                        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                            <span class="md:hidden inline-block px-2 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded mb-3">2017/07 - 2018/06</span>
+                            <h3 class="text-lg font-bold text-gray-900">社長/網管/資安講師</h3>
+                            <p class="text-blue-600 font-medium mb-3">逢甲大學黑客社第四屆</p>
+                            <details class="group">
+                                <summary class="cursor-pointer text-sm text-gray-500 hover:text-gray-700 flex items-center gap-1">
+                                    <span>查看工作內容</span>
+                                    <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </summary>
+                                <ul class="mt-3 space-y-2 text-sm text-gray-600">
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>社團年度計畫規劃與執行</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>資安實務課程設計與教學</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>企業合作專案洽談與管理</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>社團資源分配與人力調度</span></li>
+                                    <li class="flex gap-2"><span class="text-blue-500">•</span><span>社團招生與宣傳活動策劃</span></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
 
                 </div>
             </div>
         </section>
 
-        <hr class="m-0">
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-16 md:py-20 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">資安證照</h2>
+                <p class="text-gray-500 mb-8">15 張專業認證</p>
 
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-            <div class="my-auto">
-                <h2 class="mb-5">經歷</h2>
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">執行長</h3>
-                        <div class="subheading mb-3">七維思股份有限公司</div>
-                        <ul>
-                            <li>企業資安測試實戰培訓課程設計與教學</li>
-                            <li>攻防技術研究與教材開發</li>
-                            <li>企業資安防護解決方案諮詢</li>
-                            <li>資安檢測工具開發與維護</li>
-                        </ul>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">2022/08 - 至今</span>
-                    </div>
-                </div>
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-		    <div class="resume-content mr-auto">
-		        <h3 class="mb-0">WEBPT 組長</h3>
-		        <div class="subheading mb-3">HITCON GIRLS</div>
-		        <ul>
-		            <li>指導 WEBPT 相關知識與技術</li>
-		            <li>規劃 WEBPT 課程內容</li>
-		            <li>組織活動與讀書會管理</li>
-		        </ul>
-		    </div>
-		    <div class="resume-date text-md-right">
-		        <span class="text-primary">2019 - 至今</span>
-		    </div>
-		</div>
-		    
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">第七屆 + 第八屆 社長/資安講師</h3>
-                        <div class="subheading mb-3">臺灣科技大學資安研究社</div>
-                        <ul>
-                            <li>社團年度計畫規劃與執行</li>
-                            <li>資安實務課程設計與教學</li>
-                        </ul>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">2021/07 - 2022/06</span>
-                    </div>
-                </div>
-                
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">資安顧問</h3>
-                        <div class="subheading mb-3">盧氪賽忒股份有限公司（Leukocyte-Lab）</div>
-                        <ul>
-                            <li>企業資安服務（弱點掃描、滲透測試、紅隊演練、資安訪談）</li>
-                            <li>物聯網設備自動化檢測 ArgusHack-Carrier</li>
-                            <li>物聯網設備漏洞挖掘</li>
-                            <li>專案協調</li>
-                        </ul>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">2019/09 - 2022/01</span>
-                    </div>
-                </div>
-                
-                
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">資安工程師</h3>
-                        <div class="subheading mb-3">三甲科技股份有限公司</div>
-                        <ul>
-                            <li>資安資訊分析與分析平台建置與維護（Django）</li>
-                            <li>科技部領域工程教育人才培育與研究計畫之網站開發及維護（Django）</li>
-                            <li>協助執行主機弱點掃描與滲透測試服務</li>
-                        </ul>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">2016/09 - 2019/08</span>
+                <!-- Featured: OSCE3 -->
+                <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl p-6 text-white mb-8 shadow-lg">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-trophy text-3xl text-yellow-300"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">OffSec Certified Expert 3 (OSCE3)</h3>
+                            <p class="text-blue-200">Offensive Security</p>
+                            <p class="text-sm text-blue-300 mt-1">2025/05/08</p>
+                        </div>
+                        <span class="ml-auto px-3 py-1 bg-yellow-400 text-yellow-900 text-xs font-bold rounded-full">Expert</span>
                     </div>
                 </div>
 
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">助理工程師</h3>
-                        <div class="subheading mb-3">逢甲大學資通安全研究中心</div>
-                        <ul>
-                            <li>企業資安服務（弱點掃描、滲透測試、雲端APP檢測、社交郵件工程服務）專案計畫執行團隊</li>
-                            <li>科技公司主機弱點掃描服務專案</li>
-                        </ul>
+                <!-- Other certifications grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- OSED -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">OSED</span>
+                            <span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs rounded font-medium">Advanced</span>
+                        </div>
+                        <p class="text-sm text-gray-600">OffSec Exploit Developer</p>
+                        <p class="text-xs text-gray-400 mt-1">2025/05/08</p>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">2016/09 - 2019/08</span>
-                    </div>
-                </div>
 
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">顧問/資安講師</h3>
-                        <div class="subheading mb-3">逢甲大學黑客社第五屆</div>
-                        <ul>
-                            <li>資安課程規劃與教學指導</li>
-                            <li>CTF 競賽培訓與技術指導</li>
-                            <li>社團發展策略建議</li>
-                            <li>跨校資安社團合作專案協調</li>
-                            <li>資安實務經驗分享與職涯諮詢</li>
-                            <li>企業資源與實習機會媒合</li>
-                        </ul>
+                    <!-- OSEP -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">OSEP</span>
+                            <span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs rounded font-medium">Advanced</span>
+                        </div>
+                        <p class="text-sm text-gray-600">OffSec Experienced Penetration Tester</p>
+                        <p class="text-xs text-gray-400 mt-1">2025/04/12</p>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">2018/07 - 2019/06</span>
-                    </div>
-                </div>
 
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">社長/網管/資安講師</h3>
-                        <div class="subheading mb-3">逢甲大學黑客社第四屆</div>
-                        <ul>
-                            <li>社團年度計畫規劃與執行</li>
-                            <li>資安實務課程設計與教學</li>
-                            <li>企業合作專案洽談與管理</li>
-                            <li>社團資源分配與人力調度</li>
-                            <li>社團招生與宣傳活動策劃</li>
-                        </ul>
+                    <!-- OSWE -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">OSWE</span>
+                            <span class="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs rounded font-medium">Advanced</span>
+                        </div>
+                        <p class="text-sm text-gray-600">OffSec Web Expert</p>
+                        <p class="text-xs text-gray-400 mt-1">2024/11/26</p>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">2017/07 - 2018/06</span>
+
+                    <!-- OSCP -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">OSCP</span>
+                            <span class="px-2 py-0.5 bg-orange-100 text-orange-700 text-xs rounded font-medium">Intermediate</span>
+                        </div>
+                        <p class="text-sm text-gray-600">OffSec Certified Professional</p>
+                        <p class="text-xs text-gray-400 mt-1">2024/02/24</p>
+                    </div>
+
+                    <!-- OSWA -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">OSWA</span>
+                        </div>
+                        <p class="text-sm text-gray-600">OffSec Web Assessor</p>
+                        <p class="text-xs text-gray-400 mt-1">2024/10/30</p>
+                    </div>
+
+                    <!-- OSCC-SEC -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">OSCC-SEC</span>
+                        </div>
+                        <p class="text-sm text-gray-600">OffSec Certified CyberCore</p>
+                        <p class="text-xs text-gray-400 mt-1">2025/05/03</p>
+                    </div>
+
+                    <!-- OSTH -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">OSTH</span>
+                        </div>
+                        <p class="text-sm text-gray-600">OffSec Threat Hunter</p>
+                        <p class="text-xs text-gray-400 mt-1">2025/05/02</p>
+                    </div>
+
+                    <!-- OSWP -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">OSWP</span>
+                        </div>
+                        <p class="text-sm text-gray-600">OffSec Wireless Professional</p>
+                        <p class="text-xs text-gray-400 mt-1">2025/05/01</p>
+                    </div>
+
+                    <!-- OSCC-SJD -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">OSCC-SJD</span>
+                        </div>
+                        <p class="text-sm text-gray-600">OffSec Certified CyberCore</p>
+                        <p class="text-xs text-gray-400 mt-1">2025/05/01</p>
+                    </div>
+
+                    <!-- VHL Advanced+ -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">VHL Advanced+</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Virtual Hacking Labs</p>
+                    </div>
+
+                    <!-- VHL Basic -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">VHL Basic</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Virtual Hacking Labs</p>
+                    </div>
+
+                    <!-- iPAS 中級 -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">iPAS 中級</span>
+                        </div>
+                        <p class="text-sm text-gray-600">資訊安全工程師（經濟部工業局）</p>
+                    </div>
+
+                    <!-- iPAS 初級 -->
+                    <div class="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="font-semibold text-gray-900">iPAS 初級</span>
+                        </div>
+                        <p class="text-sm text-gray-600">資訊安全工程師（經濟部工業局）</p>
                     </div>
                 </div>
             </div>
-
         </section>
 
-        <hr class="m-0">
-	<section class="resume-section" id="certifications">
-    <div class="my-auto">
-        <h2 class="mb-5">資安證照</h2>
-        
-        <div class="cert-grid">
-            <!-- OSCE3 - 最高級證照 -->
-            <div class="cert-item osce3">
-                <i class="fas fa-trophy cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">OffSec Certified Expert 3 (OSCE3)</div>
-                    <div class="cert-issuer">Offensive Security</div>
-                    <div class="cert-date">2025年5月8日</div>
-                </div>
-                <span class="cert-badge">Expert</span>
-            </div>
-            
-            <!-- OSED -->
-            <div class="cert-item advanced">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">OffSec Exploit Developer (OSED)</div>
-                    <div class="cert-issuer">Offensive Security</div>
-                    <div class="cert-date">2025年5月8日</div>
-                </div>
-            </div>
-            
-            <!-- OSCC-SEC -->
-            <div class="cert-item">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">OffSec Certified CyberCore (OSCC-SEC)</div>
-                    <div class="cert-issuer">Offensive Security</div>
-                    <div class="cert-date">2025年5月3日</div>
+        <!-- Education Section -->
+        <section id="education" class="py-16 md:py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12">學歷</h2>
+
+                <div class="space-y-6">
+                    <!-- Education 1 -->
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between p-6 bg-gray-50 rounded-lg">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900">臺灣科技大學</h3>
+                            <p class="text-blue-600 font-medium">數位學習與教育研究所碩士班</p>
+                        </div>
+                        <span class="mt-2 md:mt-0 text-sm text-gray-500">2025.09 - 至今</span>
+                    </div>
+
+                    <!-- Education 2 -->
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between p-6 bg-gray-50 rounded-lg">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900">臺灣科技大學</h3>
+                            <p class="text-blue-600 font-medium">資訊工程學系碩士班</p>
+                        </div>
+                        <span class="mt-2 md:mt-0 text-sm text-gray-500">2021.09 - 2025.08</span>
+                    </div>
+
+                    <!-- Education 3 -->
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between p-6 bg-gray-50 rounded-lg">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900">逢甲大學</h3>
+                            <p class="text-blue-600 font-medium">資訊工程學系學士班</p>
+                        </div>
+                        <span class="mt-2 md:mt-0 text-sm text-gray-500">2015.09 - 2019.06</span>
+                    </div>
                 </div>
             </div>
-            
-            <!-- OSTH -->
-            <div class="cert-item">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">OffSec Threat Hunter (OSTH)</div>
-                    <div class="cert-issuer">Offensive Security</div>
-                    <div class="cert-date">2025年5月2日</div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 md:py-20 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12">技能</h2>
+
+                <!-- Tools -->
+                <div class="mb-10">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">擅長工具</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+                            <i class="fab fa-html5 text-2xl text-orange-500"></i>
+                            <span class="text-gray-700">HTML5</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+                            <i class="fab fa-python text-2xl text-blue-500"></i>
+                            <span class="text-gray-700">Python</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+                            <i class="fab fa-css3-alt text-2xl text-blue-600"></i>
+                            <span class="text-gray-700">CSS3</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+                            <i class="fab fa-js-square text-2xl text-yellow-500"></i>
+                            <span class="text-gray-700">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expertise -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">專長</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">Python Django</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">網頁前端（HTML、CSS、JavaScript）</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">滲透測試</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">網站安全</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">弱點掃描</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">封包嗅探</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">社交工程</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">OSINT</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- OSWP -->
-            <div class="cert-item">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">OffSec Wireless Professional (OSWP)</div>
-                    <div class="cert-issuer">Offensive Security</div>
-                    <div class="cert-date">2025年5月1日</div>
+        </section>
+
+        <!-- Speaking Section -->
+        <section id="speaking" class="py-16 md:py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">演講與授課紀錄</h2>
+                <p class="text-gray-500 mb-8">橫跨 2017-2025 年，累計 120+ 場</p>
+
+                <!-- Year tabs (desktop) -->
+                <div class="hidden sm:flex flex-wrap gap-2 mb-6">
+                    <button data-year-tab="2025" onclick="showYear('2025')" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors">2025</button>
+                    <button data-year-tab="2024" onclick="showYear('2024')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2024</button>
+                    <button data-year-tab="2023" onclick="showYear('2023')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2023</button>
+                    <button data-year-tab="2022" onclick="showYear('2022')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2022</button>
+                    <button data-year-tab="2021" onclick="showYear('2021')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2021</button>
+                    <button data-year-tab="2020" onclick="showYear('2020')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2020</button>
+                    <button data-year-tab="2019" onclick="showYear('2019')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2019</button>
+                    <button data-year-tab="2018" onclick="showYear('2018')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2018</button>
+                    <button data-year-tab="2017" onclick="showYear('2017')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2017</button>
+                </div>
+
+                <!-- Year accordion (mobile) -->
+                <div class="sm:hidden space-y-2 mb-6">
+                    <select id="year-select" onchange="showYear(this.value)" class="w-full p-3 border border-gray-300 rounded-lg text-gray-700 bg-white">
+                        <option value="2025">2025 年</option>
+                        <option value="2024">2024 年</option>
+                        <option value="2023">2023 年</option>
+                        <option value="2022">2022 年</option>
+                        <option value="2021">2021 年</option>
+                        <option value="2020">2020 年</option>
+                        <option value="2019">2019 年</option>
+                        <option value="2018">2018 年</option>
+                        <option value="2017">2017 年</option>
+                    </select>
+                </div>
+
+                <!-- 2025 Content -->
+                <div data-year-content="2025" class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-left">
+                            <tr>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tl-lg">單位</th>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tr-lg">主題</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">微風集團</td><td class="px-4 py-3 text-gray-700">AI資安（05/19）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">遠通電收</td><td class="px-4 py-3 text-gray-700">生活中的公開情資與釣魚威脅（06/12）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">HITCON</td><td class="px-4 py-3 text-gray-700">CR 說明會（06/10）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">龍寶建設</td><td class="px-4 py-3 text-gray-700">資安與你我的距離（06/17）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">系列課程（06/23, 08/27, 09/24, 10/29, 10/30）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">無國界醫師組織</td><td class="px-4 py-3 text-gray-700">生活中的公開情資與釣魚威脅（07/03）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">資策會</td><td class="px-4 py-3 text-gray-700">資安課程（07/09）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">交通大學資安課程</td><td class="px-4 py-3 text-gray-700">大語言模型安全（07/30）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">公務人員訓練</td><td class="px-4 py-3 text-gray-700">大語言模型安全（07/31）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">屏東縣衛生局</td><td class="px-4 py-3 text-gray-700">資安課程（08/01）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">永豐銀行</td><td class="px-4 py-3 text-gray-700">AI資安（08/08）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">兆豐銀行</td><td class="px-4 py-3 text-gray-700">網站進階安全（08/07）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">兆豐銀行</td><td class="px-4 py-3 text-gray-700">IoT 物聯網安全實務與風險防範（08/14）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">中小企銀</td><td class="px-4 py-3 text-gray-700">物聯網安全（08/18）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">vLAB 資安知不知系列</td><td class="px-4 py-3 text-gray-700">零基礎也能當資安達人：AI 手把手教你（08/19）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">台灣經濟研究院</td><td class="px-4 py-3 text-gray-700">AI資安（08/29）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">財政部</td><td class="px-4 py-3 text-gray-700">資安實戰課程（09/04）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">台科大創業分享</td><td class="px-4 py-3 text-gray-700">資安人的創業副本攻略（09/09）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">台灣高鐵</td><td class="px-4 py-3 text-gray-700">資安課程（09/13）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">中山大學</td><td class="px-4 py-3 text-gray-700">資安與你我的距離（09/18）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">鐵道局</td><td class="px-4 py-3 text-gray-700">AI資安（09/19）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">移民署</td><td class="px-4 py-3 text-gray-700">資安意識培訓課程（09/21）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">開源軟體與DevSecOps</td><td class="px-4 py-3 text-gray-700">自動化工具（09/24）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">SSDLC 課程</td><td class="px-4 py-3 text-gray-700">安全軟體開發流程（10/21）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">資管書報</td><td class="px-4 py-3 text-gray-700">AI資安（10/01）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">誠品生活</td><td class="px-4 py-3 text-gray-700">資安課程（10/02）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">AI賦能工作術系列</td><td class="px-4 py-3 text-gray-700">提升工作效率（10/08, 10/14, 11/13, 11/14）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">逢甲大學</td><td class="px-4 py-3 text-gray-700">AI資安（10/31）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">無國界醫師組織</td><td class="px-4 py-3 text-gray-700">供應鏈安全教育訓練（11/13）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">言果學習</td><td class="px-4 py-3 text-gray-700">資安與你我的距離（11/24）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">高雄醫學院</td><td class="px-4 py-3 text-gray-700">資安與你我的距離（11/20）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">JSDC 2025</td><td class="px-4 py-3 text-gray-700">從攻擊到防禦：系統化學習網站安全與滲透測試的實戰思維（11/29）</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 2024 Content -->
+                <div data-year-content="2024" class="hidden overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-left">
+                            <tr>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tl-lg">單位</th>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tr-lg">主題</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">撼訊科技</td><td class="px-4 py-3 text-gray-700">資安意識（01/11）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">資安學習資源，如何開始資安之路（02/28）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">無國界醫生</td><td class="px-4 py-3 text-gray-700">資安診療服務（02）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">掌握網站防護與滲透測試的關鍵技能（03/27）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">復興高中</td><td class="px-4 py-3 text-gray-700">資訊安全教育（03/12）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">永平高中</td><td class="px-4 py-3 text-gray-700">資訊安全教育（03/08, 05/29）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">遠通電收</td><td class="px-4 py-3 text-gray-700">物聯網安全（03）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">英業達</td><td class="px-4 py-3 text-gray-700">2024 駭客與你的距離（04）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">新竹女中</td><td class="px-4 py-3 text-gray-700">網站安全：提升攻擊者思維（04/24）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">大葉大學</td><td class="px-4 py-3 text-gray-700">資訊安全教育（04/26）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">駭客攻擊揭秘：你我身邊的 Injection Attack（05/29）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">職安署</td><td class="px-4 py-3 text-gray-700">資安教育訓練（06）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">關鍵基礎建設安全：了解工控安全（06/26）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">物聯網安全：從實戰了解常見的物聯網漏洞（07/31）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">遠通電收</td><td class="px-4 py-3 text-gray-700">API安全與開源軟體安全（08）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">API 安全（08/21）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">台經院</td><td class="px-4 py-3 text-gray-700">2024 駭客與你的距離（09/09）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">威脅建模（09/25）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">MITRE ATT&CK（09/30）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">中正大學</td><td class="px-4 py-3 text-gray-700">網站安全：提升攻擊者思維（10/01, 10/15）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">無國界醫生</td><td class="px-4 py-3 text-gray-700">AI資安意識（11/14）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">高雄科技大學</td><td class="px-4 py-3 text-gray-700">資安與AI（11/22）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">松山家商</td><td class="px-4 py-3 text-gray-700">AI時代的資安意識（11/27）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">SSDLC 安全程式開發（11/27）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">Linux 滲透測試（12/25）</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 2023 Content -->
+                <div data-year-content="2023" class="hidden overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-left">
+                            <tr>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tl-lg">單位</th>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tr-lg">主題</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">台中高工</td><td class="px-4 py-3 text-gray-700">手把手寫漏洞環境（02/07）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">陪伴式講師訓練</td><td class="px-4 py-3 text-gray-700">講師也會遇到的資安問題（03/09）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">康軒文教</td><td class="px-4 py-3 text-gray-700">資安意識與安全開發（06）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">HITCON TRAINING</td><td class="px-4 py-3 text-gray-700">資訊安全培訓（07/10-07/14）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">職安署</td><td class="px-4 py-3 text-gray-700">2023年資安與你的距離（07）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">易圖科技</td><td class="px-4 py-3 text-gray-700">資訊安全教育訓練（08）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">新竹市議會</td><td class="px-4 py-3 text-gray-700">2023年資安與你的距離（09）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">長庚大學</td><td class="px-4 py-3 text-gray-700">超越工程師的邊界：資安與創業無限可能（09/20）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">兆豐銀行</td><td class="px-4 py-3 text-gray-700">網站安全（10）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">言果學習</td><td class="px-4 py-3 text-gray-700">資訊時代的護城河（10/20）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">永平高中</td><td class="px-4 py-3 text-gray-700">資訊安全教育（11/09）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">嘉義大學</td><td class="px-4 py-3 text-gray-700">網站安全：提升攻擊者思維（11/21, 11/28）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">台北科技大學</td><td class="px-4 py-3 text-gray-700">資訊安全實務（11/20, 11/27）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">聖育集團</td><td class="px-4 py-3 text-gray-700">資安實務課程（11）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">無國界醫生</td><td class="px-4 py-3 text-gray-700">資安意識訓練（11）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">HITCON GIRLS</td><td class="px-4 py-3 text-gray-700">網站安全（11/25）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">TCA</td><td class="px-4 py-3 text-gray-700">資安意識培訓及養成（12/14）</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 2022 Content -->
+                <div data-year-content="2022" class="hidden overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-left">
+                            <tr>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tl-lg">單位</th>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tr-lg">主題</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">高中職生資安研習營</td><td class="px-4 py-3 text-gray-700">網頁安全（03/11, 03/18）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">中正大學</td><td class="px-4 py-3 text-gray-700">滲透測試工作坊（03/19, 04/15, 04/30, 05/14, 05/28）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">雲嘉資安體驗營</td><td class="px-4 py-3 text-gray-700">網頁安全與資安概論（03/26）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">中部高中電資聯合會議 SCAICT</td><td class="px-4 py-3 text-gray-700">網頁安全不安全（04/09）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Monospace 共同工作空間x創科資訊</td><td class="px-4 py-3 text-gray-700">滲透測試（04/13）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">靜宜大學 行雲者研發基地</td><td class="px-4 py-3 text-gray-700">進階滲透測試（05/07）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Monospace 共同工作空間x創科資訊</td><td class="px-4 py-3 text-gray-700">網頁大小事與弱點掃描（05/17）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">輔仁大學</td><td class="px-4 py-3 text-gray-700">資安概論x網頁安全（05/20）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">靜宜大學 行雲者研發基地</td><td class="px-4 py-3 text-gray-700">安全開發流程 SSDLC（05/21）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">輔仁大學</td><td class="px-4 py-3 text-gray-700">網頁安全（05/27）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">東海大學 駭客社</td><td class="px-4 py-3 text-gray-700">滲透測試課程（05/29）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">輔仁大學 NISRA</td><td class="px-4 py-3 text-gray-700">如何自製漏洞環境（05/31）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">澎湖科技大學 澎湖資安體驗營</td><td class="px-4 py-3 text-gray-700">網頁安全（07/04）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">HITCON</td><td class="px-4 py-3 text-gray-700">欸！原來這個網站有洞（08/19）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">AIS3 Junior</td><td class="px-4 py-3 text-gray-700">網頁安全（08/23）</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 2021 Content -->
+                <div data-year-content="2021" class="hidden overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-left">
+                            <tr>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tl-lg">單位</th>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tr-lg">主題</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">中央警察大學與新北市政府警察局</td><td class="px-4 py-3 text-gray-700">教育訓練 - Web Security</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">教育部人才培育計畫 - 東華大學</td><td class="px-4 py-3 text-gray-700">Web Security</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">高雄科技大學</td><td class="px-4 py-3 text-gray-700">關於駭客的入侵手法 - ATT&CK</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">AIS3 Club 南區</td><td class="px-4 py-3 text-gray-700">Web Security（06/12）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">SCIST</td><td class="px-4 py-3 text-gray-700">Linux Hand On（08/15）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">SCIST</td><td class="px-4 py-3 text-gray-700">Web Security Hand On（08/21）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">SITCON 學生計算機年會</td><td class="px-4 py-3 text-gray-700">Web Security 領航之路（09/04）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">AIS3 Club 資安社團幹部訓練</td><td class="px-4 py-3 text-gray-700">經營資安社團的技巧與課程規劃（09/18）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">臺灣科技大學資安研究社</td><td class="px-4 py-3 text-gray-700">資安概論（09/30）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">臺灣科技大學資安研究社</td><td class="px-4 py-3 text-gray-700">Linux & Web Basic（10/07）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">臺灣科技大學資安研究社</td><td class="px-4 py-3 text-gray-700">Web Security Basic（10/14）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">臺灣科技大學資安研究社</td><td class="px-4 py-3 text-gray-700">SQL injection（10/21）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">SCIST</td><td class="px-4 py-3 text-gray-700">Web Security Basic（10/30）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">HackerSir 幹部訓練</td><td class="px-4 py-3 text-gray-700">HTTP & 網路概論（11/06）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">SCIST</td><td class="px-4 py-3 text-gray-700">Web Security Advanced（11/13）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">HackerSir 幹部訓練</td><td class="px-4 py-3 text-gray-700">SQL injection & Cross Site Scripting（11/20）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">HackerSir 幹部訓練</td><td class="px-4 py-3 text-gray-700">Remote Code Execution（12/11）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">靜宜大學</td><td class="px-4 py-3 text-gray-700">滲透測試（12/18）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">逢甲大學</td><td class="px-4 py-3 text-gray-700">物聯網漏洞挖掘工作坊（12/25）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">臺灣科技大學資安研究社</td><td class="px-4 py-3 text-gray-700">Remote Code Execution（12/30）</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 2020 Content -->
+                <div data-year-content="2020" class="hidden overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-left">
+                            <tr>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tl-lg">單位</th>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tr-lg">主題</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">資安社團幹部培訓技術研習@輔仁大學</td><td class="px-4 py-3 text-gray-700">滲透測試流程與實作</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">成功大學數位創新學院實驗計畫</td><td class="px-4 py-3 text-gray-700">資訊安全實務</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">AIS3 新型態資安暑期課程</td><td class="px-4 py-3 text-gray-700">傑出校友演講-走在資安路上</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">清華大學資安讀書會</td><td class="px-4 py-3 text-gray-700">Web Security</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">調查局資安調查專業教育訓練</td><td class="px-4 py-3 text-gray-700">滲透測試實務</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">逢甲大學資訊安全宣導週</td><td class="px-4 py-3 text-gray-700">今晚釣到哪隻大魚-論社交攻擊原理與實際案例探討</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 2019 Content -->
+                <div data-year-content="2019" class="hidden overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-left">
+                            <tr>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tl-lg">單位</th>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tr-lg">主題</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">TDOH中區聚</td><td class="px-4 py-3 text-gray-700">滲透微經驗分享 & 資安資源的整合和心路歷程</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">SITCON學生計算機年會</td><td class="px-4 py-3 text-gray-700">黑客、社團、資訊魔法學習大總匯</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">環鴻科技</td><td class="px-4 py-3 text-gray-700">駭客入侵案例與防範 & 弱點掃描與滲透測試</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Mini-SOC資訊安全研習課程</td><td class="px-4 py-3 text-gray-700">網路安全概要</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">國防大學管理學院新訓課程</td><td class="px-4 py-3 text-gray-700">滲透測試與 APP 檢測、CTF 入門與解題工具</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">逢甲大學資訊安全宣導週</td><td class="px-4 py-3 text-gray-700">你的隱私權值錢嗎</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 2018 Content -->
+                <div data-year-content="2018" class="hidden overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-left">
+                            <tr>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tl-lg">單位</th>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tr-lg">主題</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">逢甲大學安全程式設計</td><td class="px-4 py-3 text-gray-700">資訊安全實務</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 2017 Content -->
+                <div data-year-content="2017" class="hidden overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-left">
+                            <tr>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tl-lg">單位</th>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tr-lg">主題</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">TDOH conf 駭客地下城</td><td class="px-4 py-3 text-gray-700">APP檢測之經驗分享</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section id="awards" class="py-16 md:py-20 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">榮譽事蹟</h2>
+                <p class="text-gray-500 mb-8">21 項成就</p>
+
+                <div class="space-y-8">
+                    <!-- 2025 -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">2025</h3>
+                        <div class="space-y-3">
+                            <a href="https://ithelp.ithome.com.tw/users/20108446/ironman/8816" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 bg-yellow-50 border border-yellow-200 rounded-lg hover:border-yellow-400 hover:shadow-md transition-all group">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">iT邦幫忙鐵人賽 Security 組 <span class="font-bold text-yellow-600">冠軍</span> - 資安這條路：AD 攻防實戰演練 <i class="fas fa-external-link-alt text-gray-400 group-hover:text-yellow-500 text-xs ml-1"></i></p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">2024</h3>
+                        <div class="space-y-3">
+                            <a href="https://ithelp.ithome.com.tw/users/20108446/ironman/7868" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all group">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">iT邦幫忙鐵人賽 Security 組 佳作 - 資安這條路：系統化學習藍隊技術 <i class="fas fa-external-link-alt text-gray-400 group-hover:text-blue-500 text-xs ml-1"></i></p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">2023</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">iT邦幫忙鐵人賽 影片組 佳作 - 資安 Vtuber 語野飛陪你讀新聞學資安知識</p>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">行政院國家資通安全會報技術服務中心 資安技能金盾獎競賽 嶄露頭角獎</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">2022</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">行政院國家資通安全會報技術服務中心 資安技能金盾獎競賽 嶄露頭角獎</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2021 -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">2021</h3>
+                        <div class="space-y-3">
+                            <a href="https://ithelp.ithome.com.tw/users/20108446/ironman/4492" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all group">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">iT邦幫忙鐵人賽 Security 組 佳作 - 資安這條路─系統化學習滲透測試 <i class="fas fa-external-link-alt text-gray-400 group-hover:text-blue-500 text-xs ml-1"></i></p>
+                            </a>
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">行政院國家資通安全會報技術服務中心 資安技能金盾獎競賽 嶄露頭角獎</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2020 -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">2020</h3>
+                        <div class="space-y-3">
+                            <a href="https://ithelp.ithome.com.tw/users/20108446/ironman/3463" target="_blank" rel="noopener noreferrer" class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all group">
+									<i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+									<p class="text-gray-900">iT邦幫忙鐵人賽 Security 組 佳作 - 資安這條路─以自建漏洞環境學習資訊安全<i class="fas fa-external-link-alt text-gray-400 group-hover:text-blue-500 text-xs ml-1"></i></p>
+                            </a>
+                            
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">HITCON X BALSN 資安交流經典賽 交流資格 - 悍冰黑熊</p>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">國家中山科學研究院 神盾盃網路奪旗競賽 決賽資格</p>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">IDB X HITCON BBC 漏洞挖掘競賽 聯網設備組 <span class="font-bold text-yellow-600">冠軍</span></p>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">IoT Sandbox 智慧物聯網資安競賽 決賽資格</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2019 -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">2019</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">暑期資安鑑識營隊惡意程式定位與查找實務訓練暨競賽 <span class="font-bold text-yellow-600">第一名</span></p>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">第六屆清華創業日區塊鏈組 平台獎</p>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">經濟部工業局 行動應用 App檢測工具評選 第二名</p>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">T貓盃全國資安基礎實務能力競賽 大專組 第二名</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2018 -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">2018</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">經濟部工業局 App Hackathon 第三名</p>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">AIS3新型態資安暑期課程 Final CTF <span class="font-bold text-yellow-600">中區第一名</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2017 -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">2017</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3 p-4 bg-white border border-gray-200 rounded-lg">
+                                <i class="fas fa-trophy text-yellow-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">日本 SECCON CTF for Girls 資安競賽 第二名</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 國家資安演練 -->
+                    <div>
+                        <h3 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4">國家資安網路攻防演練</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-start gap-3 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                                <i class="fas fa-shield-alt text-blue-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">108年行政院國家資通安全網路攻防演練（攻擊手）</p>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                                <i class="fas fa-shield-alt text-blue-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">107年行政院國家資通安全網路攻防演練（攻擊手）</p>
+                            </div>
+                            <div class="flex items-start gap-3 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                                <i class="fas fa-shield-alt text-blue-500 text-lg mt-0.5"></i>
+                                <p class="text-gray-900">106年行政院國家資通安全網路攻防演練（攻擊手）</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- OSCC-SJD -->
-            <div class="cert-item">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">OffSec Certified CyberCore (OSCC-SJD)</div>
-                    <div class="cert-issuer">Offensive Security</div>
-                    <div class="cert-date">2025年5月1日</div>
-                </div>
-            </div>
-            
-            <!-- OSEP -->
-            <div class="cert-item advanced">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">OffSec Experienced Penetration Tester (OSEP)</div>
-                    <div class="cert-issuer">Offensive Security</div>
-                    <div class="cert-date">2025年4月12日</div>
-                </div>
-            </div>
-            
-            <!-- OSWE -->
-            <div class="cert-item advanced">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">OffSec Web Expert (OSWE)</div>
-                    <div class="cert-issuer">Offensive Security</div>
-                    <div class="cert-date">2024年11月26日</div>
-                </div>
-            </div>
-            
-            <!-- OSWA -->
-            <div class="cert-item">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">OffSec Web Assessor (OSWA)</div>
-                    <div class="cert-issuer">Offensive Security</div>
-                    <div class="cert-date">2024年10月30日</div>
-                </div>
-            </div>
-            
-            <!-- OSCP -->
-            <div class="cert-item intermediate">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">OffSec Certified Professional (OSCP)</div>
-                    <div class="cert-issuer">Offensive Security</div>
-                    <div class="cert-date">2024年2月24日</div>
-                </div>
-            </div>
-            
-            <!-- VHL Advanced+ -->
-            <div class="cert-item">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">Virtual Hacking Labs Advanced+ Certificate of Completion</div>
-                    <div class="cert-issuer">Virtual Hacking Labs</div>
-                </div>
-            </div>
-            
-            <!-- VHL Basic -->
-            <div class="cert-item">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">Virtual Hacking Labs Basic Certificate of Completion</div>
-                    <div class="cert-issuer">Virtual Hacking Labs</div>
-                </div>
-            </div>
-            
-            <!-- iPAS 中級 -->
-            <div class="cert-item">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">iPAS 資訊安全工程師 中級</div>
-                    <div class="cert-issuer">經濟部工業局</div>
-                </div>
-            </div>
-            
-            <!-- iPAS 初級 -->
-            <div class="cert-item">
-                <i class="fas fa-certificate cert-icon"></i>
-                <div class="cert-content">
-                    <div class="cert-name">iPAS 資訊安全工程師 初級</div>
-                    <div class="cert-issuer">經濟部工業局</div>
-                </div>
-            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">&copy; 2025 飛飛 林子婷. All rights reserved.</p>
         </div>
-    </div>
-</section>
+    </footer>
 
-	<hr class="m-0">
-	    
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-            <div class="my-auto">
-                <h2 class="mb-5">學歷</h2>
-
-
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">臺灣科技大學</h3>
-                        <div class="subheading mb-3">數位學習與教育研究所碩士班</div>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">2025.09 - 至今</span>
-                    </div>
-                </div>
-				
-                <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">臺灣科技大學</h3>
-                        <div class="subheading mb-3">資訊工程學系碩士班</div>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">2021.09 - 2025.08</span>
-                    </div>
-                </div>
-
-                <div class="resume-item d-flex flex-column flex-md-row">
-                    <div class="resume-content mr-auto">
-                        <h3 class="mb-0">逢甲大學</h3>
-                        <div class="subheading mb-3">資訊工程學系學士班</div>
-                    </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">2015.09 - 2019.06</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-	
-        <hr class="m-0">
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-            <div class="my-auto">
-                <h2 class="mb-5">技能</h2>
-
-                <div class="subheading mb-3">擅長工具</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-python"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                </ul>
-
-                <div class="subheading mb-3">專長</div>
-                <ul class="fa-ul mb-0">
-                    <li><i class="fa-li fa fa-check"></i> Python Django </li>
-                    <li><i class="fa-li fa fa-check"></i> 網頁前端（HTML、CSS、JavaScript）</li>
-                    <li><i class="fa-li fa fa-check"></i> 滲透測試</li>
-		    <li><i class="fa-li fa fa-check"></i> 網站安全</li>
-                    <li><i class="fa-li fa fa-check"></i> 弱點掃描</li>
-                    <li><i class="fa-li fa fa-check"></i> 封包嗅探</li>
-                    <li><i class="fa-li fa fa-check"></i> 社交工程</li>
-                    <li><i class="fa-li fa fa-check"></i> OSINT</li>
-
-                </ul>
-            </div>
-        </section>
-
-        <hr class="m-0">
-
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-            <div class="my-auto">
-                <h2 class="mb-5">演講/授課紀錄</h2>
-    
-    <div class="tabs">
-        <button class="tab" onclick="showYear('2017')">2017年</button>
-        <button class="tab" onclick="showYear('2018')">2018年</button>
-        <button class="tab" onclick="showYear('2019')">2019年</button>
-        <button class="tab" onclick="showYear('2020')">2020年</button>
-        <button class="tab" onclick="showYear('2021')">2021年</button>
-        <button class="tab" onclick="showYear('2022')">2022年</button>
-		<button class="tab" onclick="showYear('2023')">2023年</button>
-		<button class="tab" onclick="showYear('2024')">2024年</button>
-		<button class="tab active" onclick="showYear('2025')">2025年</button>
-
-    </div>
-
-    <div id="2017" class="content">
-        <table>
-            <tr>
-                <th>演講/授課單位</th>
-                <th>主題</th>
-            </tr>
-            <tr>
-                <td>2017 TDOH conf 駭客地下城</td>
-                <td>APP檢測之經驗分享</td>
-            </tr>
-        </table>
-    </div>
-
-    <div id="2018" class="content">
-        <table>
-            <tr>
-                <th>演講/授課單位</th>
-                <th>主題</th>
-            </tr>
-            <tr>
-                <td>2018 逢甲大學安全程式設計</td>
-                <td>資訊安全實務</td>
-            </tr>
-        </table>
-    </div>
-
-    <div id="2019" class="content">
-        <table>
-            <tr>
-                <th>演講/授課單位</th>
-                <th>主題</th>
-            </tr>
-            <tr>
-                <td>2019 TDOH中區聚</td>
-                <td>滲透微經驗分享 & 資安資源的整合和心路歷程</td>
-            </tr>
-            <tr>
-                <td>2019 SITCON學生計算機年會</td>
-                <td>黑客、社團、資訊魔法學習大總匯</td>
-            </tr>
-            <tr>
-                <td>2019 環鴻科技</td>
-                <td>駭客入侵案例與防範 & 弱點掃描與滲透測試</td>
-            </tr>
-            <tr>
-                <td>2019 Mini-SOC資訊安全研習課程</td>
-                <td>網路安全概要</td>
-            </tr>
-            <tr>
-                <td>2019 國防大學管理學院新訓課程</td>
-                <td>滲透測試與 APP 檢測、CTF 入門與解題工具</td>
-            </tr>
-            <tr>
-                <td>2019 逢甲大學資訊安全宣導週</td>
-                <td>你的隱私權值錢嗎</td>
-            </tr>
-        </table>
-    </div>
-
-    <div id="2020" class="content">
-        <table>
-            <tr>
-                <th>演講/授課單位</th>
-                <th>主題</th>
-            </tr>
-            <tr>
-                <td>2020 資安社團幹部培訓技術研習@輔仁大學</td>
-                <td>滲透測試流程與實作</td>
-            </tr>
-            <tr>
-                <td>2020 成功大學數位創新學院實驗計畫</td>
-                <td>資訊安全實務</td>
-            </tr>
-            <tr>
-                <td>2020 AIS3 新型態資安暑期課程</td>
-                <td>傑出校友演講-走在資安路上</td>
-            </tr>
-            <tr>
-                <td>2020 清華大學資安讀書會</td>
-                <td>Web Security</td>
-            </tr>
-            <tr>
-                <td>2020 調查局資安調查專業教育訓練</td>
-                <td>滲透測試實務</td>
-            </tr>
-            <tr>
-                <td>2020 逢甲大學資訊安全宣導週</td>
-                <td>今晚釣到哪隻大魚-論社交攻擊原理與實際案例探討</td>
-            </tr>
-        </table>
-    </div>
-
-    <div id="2021" class="content">
-        <table>
-            <tr>
-                <th>演講/授課單位</th>
-                <th>主題</th>
-            </tr>
-            <tr>
-                <td>2021 中央警察大學與新北市政府警察局</td>
-                <td>教育訓練 - Web Security</td>
-            </tr>
-            <tr>
-                <td>2021 教育部人才培育計畫 - 東華大學</td>
-                <td>Web Security</td>
-            </tr>
-            <tr>
-                <td>2021 高雄科技大學</td>
-                <td>關於駭客的入侵手法 - ATT&CK</td>
-            </tr>
-            <tr>
-                <td>2021 AIS3 Club 南區@0612</td>
-                <td>Web Security</td>
-            </tr>
-            <tr>
-                <td>2021 SCIST @0815</td>
-                <td>Linux Hand On</td>
-            </tr>
-            <tr>
-                <td>2021 SCIST @0821</td>
-                <td>Web Security Hand On</td>
-            </tr>
-            <tr>
-                <td>2021 SITCON 學生計算機年會 @0904</td>
-                <td>Web Security 領航之路</td>
-            </tr>
-            <tr>
-                <td>2021 AIS3 Club 資安社團幹部訓練＠0918</td>
-                <td>經營資安社團的技巧與課程規劃</td>
-            </tr>
-            <tr>
-                <td>2021 臺灣科技大學資安研究社 ＠0930</td>
-                <td>資安概論</td>
-            </tr>
-            <tr>
-                <td>2021 臺灣科技大學資安研究社 ＠1007</td>
-                <td>Linux & Web Basic</td>
-            </tr>
-            <tr>
-                <td>2021 臺灣科技大學資安研究社 ＠1014</td>
-                <td>Web Security Basic</td>
-            </tr>
-            <tr>
-                <td>2021 臺灣科技大學資安研究社 ＠1021</td>
-                <td>SQL injection</td>
-            </tr>
-            <tr>
-                <td>2021 SCIST ＠1030</td>
-                <td>Web Security Basic</td>
-            </tr>
-            <tr>
-                <td>2021 ＨackerSir 幹部訓練 ＠1106</td>
-                <td>HTTP ＆ 網路概論</td>
-            </tr>
-            <tr>
-                <td>2021 SCIST ＠1113</td>
-                <td>Web Security Advanced</td>
-            </tr>
-            <tr>
-                <td>2021 ＨackerSir 幹部訓練 ＠1120</td>
-                <td>SQL injetion & Cross Site Scripting</td>
-            </tr>
-            <tr>
-                <td>2021 ＨackerSir 幹部訓練 ＠1211</td>
-                <td>Remote Code Exection</td>
-            </tr>
-            <tr>
-                <td>2021 靜宜大學 ＠1218</td>
-                <td>滲透測試</td>
-            </tr>
-            <tr>
-                <td>2021 逢甲大學 ＠1225</td>
-                <td>物聯網漏洞挖掘工作坊</td>
-            </tr>
-            <tr>
-                <td>2021 臺灣科技大學資安研究社 ＠1230</td>
-                <td>Remote Code Exection</td>
-            </tr>
-        </table>
-    </div>
-
-    <div id="2022" class="content">
-        <table>
-            <tr>
-                <th>演講/授課單位</th>
-                <th>主題</th>
-            </tr>
-            <tr>
-                <td>2022 高中職生資安研習營 @3/11、3/18</td>
-                <td>網頁安全</td>
-            </tr>
-            <tr>
-                <td>2022 中正大學@3/19、4/15、4/30、5/14、5/28</td>
-                <td>滲透測試工作坊</td>
-            </tr>
-            <tr>
-                <td>2022 雲嘉資安體驗營@3/26</td>
-                <td>網頁安全與資安概論</td>
-            </tr>
-            <tr>
-                <td>2022 中部高中電資聯合會議 SCAICT ＠0409</td>
-                <td>網頁安全不安全</td>
-            </tr>
-            <tr>
-                <td>2022 Monospace 共同工作空間x創科資訊 @0413</td>
-                <td>滲透測試</td>
-            </tr>
-            <tr>
-                <td>2022 靜宜大學 行雲者研發基地＠0507</td>
-                <td>進階滲透測試</td>
-            </tr>
-            <tr>
-                <td>2022 Monospace 共同工作空間x創科資訊 @0517</td>
-                <td>網頁大小事與弱點掃描</td>
-            </tr>
-            <tr>
-                <td>2022 輔仁大學 ＠0520</td>
-                <td>資安概論x網頁安全</td>
-            </tr>
-            <tr>
-                <td>2022 靜宜大學 行雲者研發基地＠0521</td>
-                <td>安全開發流程 SSDLC</td>
-            </tr>
-            <tr>
-                <td>2022 輔仁大學 ＠0527</td>
-                <td>網頁安全</td>
-            </tr>
-            <tr>
-                <td>2022 東海大學 駭客社＠0529</td>
-                <td>滲透測試課程</td>
-            </tr>
-            <tr>
-                <td>2022 輔仁大學 NISRA＠0531</td>
-                <td>如何自製漏洞環境</td>
-            </tr>
-            <tr>
-                <td>2022 澎湖科技大學 澎湖資安體驗營@0704</td>
-                <td>網頁安全</td>
-            </tr>
-            <tr>
-                <td>2022 HITCON@0819</td>
-                <td>欸！原來這個網站有洞：手把手帶你認識網站常見漏洞</td>
-            </tr>
-            <tr>
-                <td>2022 AIS3 Junior@0823</td>
-                <td>網頁安全</td>
-            </tr>
-        </table>
-    </div>
-
-	<div id="2023" class="content">
-		<table>
-			<tr>
-				<th>演講/授課單位</th>
-				<th>主題</th>
-			</tr>
-			<tr>
-				<td>台中高工 @02-07</td>
-				<td>手把手寫漏洞環境</td>
-			</tr>
-			<tr>
-				<td>陪伴式講師訓練 @0309</td>
-				<td>講師也會遇到的資安問題</td>
-			</tr>
-			<tr>
-				<td>康軒文教 @06</td>
-				<td>資安意識與安全開發</td>
-			</tr>
-			<tr>
-				<td>HITCON TRAINING @0710-0714</td>
-				<td>資訊安全培訓</td>
-			</tr>
-			<tr>
-				<td>職安署 @07</td>
-				<td>2023年資安與你的距離</td>
-			</tr>
-			<tr>
-				<td>易圖科技 @08</td>
-				<td>資訊安全教育訓練</td>
-			</tr>
-			<tr>
-				<td>新竹市議會 @09</td>
-				<td>2023年資安與你的距離</td>
-			</tr>
-			<tr>
-				<td>長庚大學 @0920</td>
-				<td>超越工程師的邊界：資安與創業無限可能</td>
-			</tr>
-			<tr>
-				<td>兆豐銀行 @10</td>
-				<td>網站安全</td>
-			</tr>
-			<tr>
-				<td>言果學習 @1020</td>
-				<td>資訊時代的護城河</td>
-			</tr>
-			<tr>
-				<td>永平高中 @1109</td>
-				<td>資訊安全教育</td>
-			</tr>
-			<tr>
-				<td>嘉義大學 @1121、1128</td>
-				<td>網站安全：提升攻擊者思維</td>
-			</tr>
-			<tr>
-				<td>台北科技大學 @1120、1127</td>
-				<td>資訊安全實務</td>
-			</tr>
-			<tr>
-				<td>聖育集團 @11</td>
-				<td>資安實務課程</td>
-			</tr>
-			<tr>
-				<td>無國界醫生 @11</td>
-				<td>資安意識訓練</td>
-			</tr>
-			<tr>
-				<td>HITCON GILRS @1125</td>
-				<td>網站安全</td>
-			</tr>
-			<tr>
-				<td>TCA @1214</td>
-				<td>資安意識培訓及養成</td>
-			</tr>
-		</table>
-	</div>
-
-<div id="2024" class="content active">
-    <table>
-        <tr>
-            <th>演講/授課單位</th>
-            <th>主題</th>
-        </tr>
-        <tr>
-            <td>撼訊科技 @0111</td>
-            <td>資安意識</td>
-        </tr>
-        <tr>
-            <td>七維思直播 @0228</td>
-            <td>資安學習資源，如何開始資安之路</td>
-        </tr>
-        <tr>
-            <td>無國界醫生 @02</td>
-            <td>資安診療服務</td>
-        </tr>
-        <tr>
-            <td>七維思直播 @0327</td>
-            <td>掌握網站防護與滲透測試的關鍵技能</td>
-        </tr>
-        <tr>
-            <td>復興高中 @0312</td>
-            <td>資訊安全教育</td>
-        </tr>
-        <tr>
-            <td>永平高中 @0308, 0529</td>
-            <td>資訊安全教育</td>
-        </tr>
-        <tr>
-            <td>遠通電收 @03</td>
-            <td>物聯網安全</td>
-        </tr>
-        <tr>
-            <td>英業達 @04</td>
-            <td>2024 駭客與你的距離</td>
-        </tr>
-        <tr>
-            <td>新竹女中 @0424</td>
-            <td>網站安全：提升攻擊者思維</td>
-        </tr>
-        <tr>
-            <td>大葉大學 @0426</td>
-            <td>資訊安全教育</td>
-        </tr>
-        <tr>
-            <td>七維思直播 @0529</td>
-            <td>駭客攻擊揭秘：你我身邊的 Injection Attack</td>
-        </tr>
-        <tr>
-            <td>職安署 @06</td>
-            <td>資安教育訓練</td>
-        </tr>
-        <tr>
-            <td>七維思直播 @0626</td>
-            <td>關鍵基礎建設安全：了解工控安全</td>
-        </tr>
-        <tr>
-            <td>七維思直播 @0731</td>
-            <td>物聯網安全：從實戰了解常見的物聯網漏洞</td>
-        </tr>
-        <tr>
-            <td>遠通電收 @08</td>
-            <td>API安全與開源軟體安全</td>
-        </tr>
-        <tr>
-            <td>七維思直播 @0821</td>
-            <td>API 安全</td>
-        </tr>
-        <tr>
-            <td>台經院 @0909</td>
-            <td>2024 駭客與你的距離</td>
-        </tr>
-        <tr>
-            <td>七維思直播 @0925</td>
-            <td>威脅建模</td>
-        </tr>
-        <tr>
-            <td>七維思直播 @0930</td>
-            <td>MITRE ATT&CK</td>
-        </tr>
-        <tr>
-            <td>中正大學 @1001, 1015</td>
-            <td>網站安全：提升攻擊者思維</td>
-        </tr>
-        <tr>
-            <td>無國界醫生 @1114</td>
-            <td>AI資安意識</td>
-        </tr>
-        <tr>
-            <td>高雄科技大學 @1122</td>
-            <td>資安與AI</td>
-        </tr>
-        <tr>
-            <td>松山家商 @1127</td>
-            <td>AI時代的資安意識</td>
-        </tr>
-        <tr>
-            <td>七維思直播 @1127</td>
-            <td>SSDLC 安全程式開發</td>
-        </tr>
-        <tr>
-            <td>七維思直播 @1225</td>
-            <td>Linux 滲透測試</td>
-        </tr>
-    </table>
-</div>
-
-<div id="2025" class="content">
-    <table>
-        <tr>
-            <th>演講/授課單位</th>
-            <th>主題</th>
-        </tr>
-
-        <tr>
-            <td>2025 微風集團</td>
-            <td>AI資安（05/19）</td>
-        </tr>
-
-        <tr>
-            <td>2025 遠通電收</td>
-            <td>生活中的公開情資與釣魚威脅（06/12）</td>
-        </tr>
-        <tr>
-            <td>2025 HITCON</td>
-            <td>CR 說明會（06/10）</td>
-        </tr>
-        <tr>
-            <td>2025 龍寶建設</td>
-            <td>資安與你我的距離（06/17）</td>
-        </tr>
-        <tr>
-            <td>2025 七維思直播</td>
-            <td>系列課程（06/23, 08/27, 09/24, 10/29, 10/30）</td>
-        </tr>
-        <tr>
-            <td>2025 無國界醫師組織</td>
-            <td>生活中的公開情資與釣魚威脅（07/03）</td>
-        </tr>
-        <tr>
-            <td>2025 資策會</td>
-            <td>資安課程（07/09）</td>
-        </tr>
-        <tr>
-            <td>2025 交通大學資安課程</td>
-            <td>大語言模型安全（07/30）</td>
-        </tr>
-        <tr>
-            <td>2025 公務人員訓練</td>
-            <td>大語言模型安全（07/31）</td>
-        </tr>
-        <tr>
-            <td>2025 屏東縣衛生局</td>
-            <td>資安課程（08/01）</td>
-        </tr>
-        <tr>
-            <td>2025 永豐銀行</td>
-            <td>AI資安（08/08）</td>
-        </tr>
-        <tr>
-            <td>2025 兆豐銀行</td>
-            <td>網站進階安全（08/07）</td>
-        </tr>
-        <tr>
-            <td>2025 兆豐銀行</td>
-            <td>IoT 物聯網安全實務與風險防範（08/14）</td>
-        </tr>
-		<tr>
-            <td>2025 中小企銀</td>
-            <td>物聯網安全（08/18）</td>
-        </tr>
-        <tr>
-            <td>2025 vLAB 資安知不知系列</td>
-            <td>零基礎也能當資安達人：AI 手把手教你（08/19）</td>
-        </tr>
-        <tr>
-            <td>2025 台灣經濟研究院</td>
-            <td>AI資安（08/29）</td>
-        </tr>
-        <tr>
-            <td>2025 財政部</td>
-            <td>資安實戰課程（09/04）</td>
-        </tr>
-        <tr>
-            <td>2025 台科大創業分享</td>
-            <td>資安人的創業副本攻略：從校園到 AI 時代的闖關之旅（09/09）</td>
-        </tr>
-        <tr>
-            <td>2025 台灣高鐵</td>
-            <td>資安課程（09/13）</td>
-        </tr>
-        <tr>
-            <td>2025 中山大學</td>
-            <td>資安與你我的距離（09/18）</td>
-        </tr>
-        <tr>
-            <td>2025 鐵道局</td>
-            <td>AI資安（09/19）</td>
-        </tr>
-        <tr>
-            <td>2025 移民署</td>
-            <td>資安意識培訓課程（09/21）</td>
-        </tr>
-        <tr>
-            <td>2025 開源軟體與DevSecOps</td>
-            <td>自動化工具（09/24）</td>
-        </tr>
-        <tr>
-            <td>2025 SSDLC 課程</td>
-            <td>安全軟體開發流程（10/21）</td>
-        </tr>
-        <tr>
-            <td>2025 資管書報</td>
-            <td>AI資安（10/01）</td>
-        </tr>
-        <tr>
-            <td>2025 誠品生活</td>
-            <td>資安課程（10/02）</td>
-        </tr>
-        <tr>
-            <td>2025 AI賦能工作術系列</td>
-            <td>提升工作效率（10/08, 10/14, 11/13, 11/14）</td>
-        </tr>
-        <tr>
-            <td>2025 逢甲大學</td>
-            <td>AI資安（10/31）</td>
-        </tr>
-        <tr>
-            <td>2025 無國界醫師組織</td>
-            <td>供應鏈安全教育訓練（11/13）</td>
-        </tr>
-        <tr>
-            <td>2025 言果學習</td>
-            <td>資安與你我的距離（11/24）</td>
-        </tr>
-        <tr>
-            <td>2025 高雄醫學院</td>
-            <td>資安與你我的距離（11/20）</td>
-        </tr>
-        <tr>
-            <td>2025 JSDC 2025（JavaScript Developer Conference）</td>
-            <td>從攻擊到防禦：系統化學習網站安全與滲透測試的實戰思維（11/29）</td>
-        </tr>
-    </table>
-</div>
-
-
+    <!-- JavaScript -->
     <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        });
+    });
+
+    // Year tab switching (for speaking records)
     function showYear(year) {
-        // 移除所有內容的active類
-        document.querySelectorAll('.content').forEach(content => {
-            content.classList.remove('active');
+        // Hide all year contents
+        document.querySelectorAll('[data-year-content]').forEach(el => {
+            el.classList.add('hidden');
         });
-        // 移除所有標籤的active類
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.classList.remove('active');
+        // Show selected year
+        const content = document.querySelector(`[data-year-content="${year}"]`);
+        if (content) {
+            content.classList.remove('hidden');
+        }
+
+        // Update tab styles (desktop)
+        document.querySelectorAll('[data-year-tab]').forEach(tab => {
+            tab.classList.remove('bg-blue-600', 'text-white');
+            tab.classList.add('bg-gray-100', 'text-gray-600');
         });
-        
-        // 添加active類到選中的年份
-        document.getElementById(year).classList.add('active');
-// 將對應的按鈕設為active
-		document.querySelector(`.tab[onclick*="${year}"]`).classList.add('active');
-		}
+        const activeTab = document.querySelector(`[data-year-tab="${year}"]`);
+        if (activeTab) {
+            activeTab.classList.add('bg-blue-600', 'text-white');
+            activeTab.classList.remove('bg-gray-100', 'text-gray-600');
+        }
 
-		// 初始顯示2025年的內容
-		document.addEventListener('DOMContentLoaded', () => {
-		   showYear('2025');
-		});
-	</script>
-            </div>
-        </section>
+        // Update mobile select
+        const yearSelect = document.getElementById('year-select');
+        if (yearSelect) {
+            yearSelect.value = year;
+        }
+    }
 
-        <hr class="m-0">
+    // Scroll Spy for navigation highlight
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-            <div class="my-auto">
-                <h2 class="mb-5">榮譽事蹟</h2>
-                <ul class="fa-ul mb-0">
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2025 第17屆 iT 邦幫忙鐵人賽 Security 組 冠軍 - 資安這條路：AD 攻防實戰演練</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2024 第16屆 iT 邦幫忙鐵人賽 Security 組 佳作 - 資安這條路：系統化學習藍隊技術</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2023 第15屆 iT 邦幫忙鐵人賽 影片 組 佳作 - 資安 Vtuber 語野飛陪你讀新聞學資安知識 </li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2023 行政院國家資通安全會報技術服務中心 資安技能金盾獎競賽 嶄露頭角獎</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2022 行政院國家資通安全會報技術服務中心 資安技能金盾獎競賽 嶄露頭角獎</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2021 第13屆 iT 邦幫忙鐵人賽 Security 組 佳作 - 資安這條路─系統化學習滲透測試</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2021 行政院國家資通安全會報技術服務中心 資安技能金盾獎競賽 嶄露頭角獎</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2020 第12屆 iT 邦幫忙鐵人賽 Security 組 佳作 - 資安這條路─以自建漏洞環境學習資訊安全</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2020 HITCON X BALSN 資安交流經典賽 交流資格 - 悍冰黑熊</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2020 國家中山科學研究院 神盾盃網路奪旗競賽 決賽資格</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2020 IDB X HITCON BBC 漏洞挖掘競賽 聯網設備組 冠軍</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2020 IoT Sandbox 智慧物聯網資安競賽 決賽資格</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2019 暑期資安鑑識營隊惡意程式定位與查找實務訓練暨競賽 第一名</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2019 第六屆清華創業日區塊鏈組 平台獎</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2019 經濟部工業局 行動應用 App檢測工具評選 第二名</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2019 T貓盃全國資安基礎實務能力競賽 大專組 第二名</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2018 經濟部工業局 App Hackathon 第三名</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2018 AIS3新型態資安暑期課程 Final CTF 中區第一名</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>2017 日本 SECCON CTF for Girls 資安競賽 第二名</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>108年行政院國家資通安全網路攻防演練（攻擊手）</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>107年行政院國家資通安全網路攻防演練（攻擊手）</li>
-                    <li><i class="fa-li fa fa-trophy text-warning"></i>106年行政院國家資通安全網路攻防演練（攻擊手）</li>
+    function updateActiveNav() {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            if (scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
 
-                    
+        navLinks.forEach(link => {
+            link.classList.remove('text-blue-600', 'bg-blue-50');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('text-blue-600', 'bg-blue-50');
+            }
+        });
+    }
 
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
 
-                </ul>
-            </div>
-        </section>
+    // Initialize year tabs
+    showYear('2025');
 
-    </div>
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- jQuery CDN - Slim version (=without AJAX) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-
-    <!-- Plugin JavaScript
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
-
-    <!-- Custom scripts for this template -->
-    <script src="static/js/resume.min.js"></script>
-    <script>
+    // URL parameter logging (preserved from original)
     const urlSearchParams = new URLSearchParams(window.location.search);
     const params = Object.fromEntries(urlSearchParams.entries());
-    console.log(params);
+    if (Object.keys(params).length > 0) {
+        console.log(params);
+    }
     </script>
 
 </body>
-
 </html>
