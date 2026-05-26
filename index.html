@@ -652,11 +652,12 @@
         <section id="speaking" class="py-16 md:py-20 bg-white">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">演講與授課紀錄</h2>
-                <p class="text-gray-500 mb-8">橫跨 2017-2025 年，累計 120+ 場</p>
+                <p class="text-gray-500 mb-8">橫跨 2017-2026 年，累計 130+ 場</p>
 
                 <!-- Year tabs (desktop) -->
                 <div class="hidden sm:flex flex-wrap gap-2 mb-6">
-                    <button data-year-tab="2025" onclick="showYear('2025')" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors">2025</button>
+                    <button data-year-tab="2026" onclick="showYear('2026')" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors">2026</button>
+                    <button data-year-tab="2025" onclick="showYear('2025')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2025</button>
                     <button data-year-tab="2024" onclick="showYear('2024')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2024</button>
                     <button data-year-tab="2023" onclick="showYear('2023')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2023</button>
                     <button data-year-tab="2022" onclick="showYear('2022')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2022</button>
@@ -670,6 +671,7 @@
                 <!-- Year accordion (mobile) -->
                 <div class="sm:hidden space-y-2 mb-6">
                     <select id="year-select" onchange="showYear(this.value)" class="w-full p-3 border border-gray-300 rounded-lg text-gray-700 bg-white">
+                        <option value="2026">2026 年</option>
                         <option value="2025">2025 年</option>
                         <option value="2024">2024 年</option>
                         <option value="2023">2023 年</option>
@@ -682,8 +684,37 @@
                     </select>
                 </div>
 
+                <!-- 2026 Content -->
+                <div data-year-content="2026" class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-left">
+                            <tr>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tl-lg">單位</th>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tr-lg">主題</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">台灣大學</td><td class="px-4 py-3 text-gray-700">資安與你我的距離（01/09）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">夢時代</td><td class="px-4 py-3 text-gray-700">AI 賦能工作術（01/23）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">OWASP TOP 10 & CWE TOP 25 I（01/28）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">無國界醫生</td><td class="px-4 py-3 text-gray-700">AI 賦能工作術（02/05）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">OWASP TOP 10 & CWE TOP 25 II（02/25）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">奇美</td><td class="px-4 py-3 text-gray-700">AI 賦能工作術（03/20）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">Kali Linux 入門實戰：常見工具、攻擊情境與防守思維（03/25）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">時報周刊</td><td class="px-4 py-3 text-gray-700">AI 賦能工作術（03/30）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">威脅建模 × AI 開發 × 攻擊者思路（04/29）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">農業科技研究院</td><td class="px-4 py-3 text-gray-700">AI資安（05/03）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">高雄醫學大學</td><td class="px-4 py-3 text-gray-700">AI 賦能：提升工作效率的數位工具實戰（05/14）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Garmin</td><td class="px-4 py-3 text-gray-700">AI 賦能：提升工作效率的數位工具實戰（05/15）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">永平高中</td><td class="px-4 py-3 text-gray-700">資安攻防戰 - 破解駭客手法（05/21）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">Windows 滲透測試初探：MS17-010 × msfconsole × Meterpreter（05/27）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">CDE</td><td class="px-4 py-3 text-gray-700">資安課程（05/28）</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <!-- 2025 Content -->
-                <div data-year-content="2025" class="overflow-x-auto">
+                <div data-year-content="2025" class="hidden overflow-x-auto">
                     <table class="w-full text-sm">
                         <thead class="bg-gray-50 text-left">
                             <tr>
@@ -696,7 +727,18 @@
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">遠通電收</td><td class="px-4 py-3 text-gray-700">生活中的公開情資與釣魚威脅（06/12）</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">HITCON</td><td class="px-4 py-3 text-gray-700">CR 說明會（06/10）</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">龍寶建設</td><td class="px-4 py-3 text-gray-700">資安與你我的距離（06/17）</td></tr>
-                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">系列課程（06/23, 08/27, 09/24, 10/29, 10/30）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">自學資安不迷路：一次掌握最有效的學習資源（01/22）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">API 安全（02/26）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">物聯網安全（03/26）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">資安與 AI 的交匯點：人才、技術與未來（04/30）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">OffSec Learn Unlimited 證照經驗分享（05/28）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">OT 安全（工控資安）實作示範（06/25）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">大語言模型（07/30）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">用圖解學資安：從基礎建設到攻防思維（08/27）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">軟體供應鏈治理與 SBOM（09/24）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">Windows AD 安全（10/29）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">Windows AD 安全 2（11/26）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">Windows AD 安全 3（12/24）</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">無國界醫師組織</td><td class="px-4 py-3 text-gray-700">生活中的公開情資與釣魚威脅（07/03）</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">資策會</td><td class="px-4 py-3 text-gray-700">資安課程（07/09）</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">交通大學資安課程</td><td class="px-4 py-3 text-gray-700">大語言模型安全（07/30）</td></tr>
@@ -748,6 +790,7 @@
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">英業達</td><td class="px-4 py-3 text-gray-700">2024 駭客與你的距離（04）</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">新竹女中</td><td class="px-4 py-3 text-gray-700">網站安全：提升攻擊者思維（04/24）</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">大葉大學</td><td class="px-4 py-3 text-gray-700">資訊安全教育（04/26）</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">VPN 大逃殺：為什麼使用 VPN 還是會被追蹤（04）</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">駭客攻擊揭秘：你我身邊的 Injection Attack（05/29）</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">職安署</td><td class="px-4 py-3 text-gray-700">資安教育訓練（06）</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">七維思直播</td><td class="px-4 py-3 text-gray-700">關鍵基礎建設安全：了解工控安全（06/26）</td></tr>
@@ -1190,7 +1233,7 @@
     updateActiveNav();
 
     // Initialize year tabs
-    showYear('2025');
+    showYear('2026');
 
     // URL parameter logging (preserved from original)
     const urlSearchParams = new URLSearchParams(window.location.search);

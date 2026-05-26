@@ -653,11 +653,12 @@
         <section id="speaking" class="py-16 md:py-20 bg-white">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">Speaking & Teaching</h2>
-                <p class="text-gray-500 mb-8">120+ sessions across 2017-2025</p>
+                <p class="text-gray-500 mb-8">130+ sessions across 2017-2026</p>
 
                 <!-- Year tabs (desktop) -->
                 <div class="hidden sm:flex flex-wrap gap-2 mb-6">
-                    <button data-year-tab="2025" onclick="showYear('2025')" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors">2025</button>
+                    <button data-year-tab="2026" onclick="showYear('2026')" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors">2026</button>
+                    <button data-year-tab="2025" onclick="showYear('2025')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2025</button>
                     <button data-year-tab="2024" onclick="showYear('2024')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2024</button>
                     <button data-year-tab="2023" onclick="showYear('2023')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2023</button>
                     <button data-year-tab="2022" onclick="showYear('2022')" class="px-4 py-2 bg-gray-100 text-gray-600 rounded-lg text-sm font-medium hover:bg-gray-200 transition-colors">2022</button>
@@ -671,6 +672,7 @@
                 <!-- Year accordion (mobile) -->
                 <div class="sm:hidden space-y-2 mb-6">
                     <select id="year-select" onchange="showYear(this.value)" class="w-full p-3 border border-gray-300 rounded-lg text-gray-700 bg-white">
+                        <option value="2026">2026</option>
                         <option value="2025">2025</option>
                         <option value="2024">2024</option>
                         <option value="2023">2023</option>
@@ -683,8 +685,37 @@
                     </select>
                 </div>
 
+                <!-- 2026 Content -->
+                <div data-year-content="2026" class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-left">
+                            <tr>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tl-lg">Organization</th>
+                                <th class="px-4 py-3 font-medium text-gray-500 rounded-tr-lg">Topic</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">National Taiwan University</td><td class="px-4 py-3 text-gray-700">How Close Security Is to All of Us (01/09)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Dream Mall</td><td class="px-4 py-3 text-gray-700">AI-Empowered Productivity (01/23)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">OWASP TOP 10 & CWE TOP 25 I (01/28)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Médecins Sans Frontières (MSF)</td><td class="px-4 py-3 text-gray-700">AI-Empowered Productivity (02/05)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">OWASP TOP 10 & CWE TOP 25 II (02/25)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Chimei</td><td class="px-4 py-3 text-gray-700">AI-Empowered Productivity (03/20)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Kali Linux Hands-On: Common Tools, Attack Scenarios and a Defender's Mindset (03/25)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">China Times Weekly</td><td class="px-4 py-3 text-gray-700">AI-Empowered Productivity (03/30)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Threat Modeling × AI Development × Attacker Mindset (04/29)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Agricultural Technology Research Institute</td><td class="px-4 py-3 text-gray-700">AI Security (05/03)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kaohsiung Medical University</td><td class="px-4 py-3 text-gray-700">AI Empowerment: Hands-on Digital Tools for Boosting Productivity (05/14)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Garmin</td><td class="px-4 py-3 text-gray-700">AI Empowerment: Hands-on Digital Tools for Boosting Productivity (05/15)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Yongping Senior High School</td><td class="px-4 py-3 text-gray-700">Security Offense & Defense: Cracking Hacker Techniques (05/21)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Intro to Windows Penetration Testing: MS17-010 × msfconsole × Meterpreter (05/27)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">CDE</td><td class="px-4 py-3 text-gray-700">Security Course (05/28)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <!-- 2025 Content -->
-                <div data-year-content="2025" class="overflow-x-auto">
+                <div data-year-content="2025" class="hidden overflow-x-auto">
                     <table class="w-full text-sm">
                         <thead class="bg-gray-50 text-left">
                             <tr>
@@ -697,7 +728,18 @@
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Far Eastern Electronic Toll Collection (FETC)</td><td class="px-4 py-3 text-gray-700">OSINT and Phishing Threats in Daily Life (06/12)</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">HITCON</td><td class="px-4 py-3 text-gray-700">CR Briefing (06/10)</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Long Bon Construction</td><td class="px-4 py-3 text-gray-700">How Close Security Is to All of Us (06/17)</td></tr>
-                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Course series (06/23, 08/27, 09/24, 10/29, 10/30)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Self-Learning Security Without Getting Lost: The Most Effective Learning Resources (01/22)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">API Security (02/26)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">IoT Security (03/26)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Where Security Meets AI: Talent, Technology and the Future (04/30)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">OffSec Learn Unlimited Certification Experience Sharing (05/28)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">OT Security (ICS Security) Hands-on Demo (06/25)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Large Language Models (07/30)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Learning Security Through Diagrams: From Infrastructure to Offense & Defense (08/27)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Software Supply Chain Governance and SBOM (09/24)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Windows AD Security (10/29)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Windows AD Security 2 (11/26)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Windows AD Security 3 (12/24)</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Médecins Sans Frontières (MSF)</td><td class="px-4 py-3 text-gray-700">OSINT and Phishing Threats in Daily Life (07/03)</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Institute for Information Industry (III)</td><td class="px-4 py-3 text-gray-700">Security course (07/09)</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">National Yang Ming Chiao Tung University</td><td class="px-4 py-3 text-gray-700">Large Language Model Security (07/30)</td></tr>
@@ -749,6 +791,7 @@
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Inventec</td><td class="px-4 py-3 text-gray-700">2024 How Close Hackers Are to You (04)</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Hsinchu Girls' Senior High School</td><td class="px-4 py-3 text-gray-700">Web Security: Developing an Attacker's Mindset (04/24)</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Da-Yeh University</td><td class="px-4 py-3 text-gray-700">Information Security Education (04/26)</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">VPN Battle Royale: Why You Can Still Be Tracked While Using a VPN (04)</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Hacking Exposed: The Injection Attacks Around Us (05/29)</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Occupational Safety and Health Administration</td><td class="px-4 py-3 text-gray-700">Security Training (06)</td></tr>
                             <tr class="hover:bg-gray-50"><td class="px-4 py-3 text-gray-900">Kiwis Livestream</td><td class="px-4 py-3 text-gray-700">Critical Infrastructure Security: Understanding ICS Security (06/26)</td></tr>
@@ -1191,7 +1234,7 @@
     updateActiveNav();
 
     // Initialize year tabs
-    showYear('2025');
+    showYear('2026');
 
     // URL parameter logging (preserved from original)
     const urlSearchParams = new URLSearchParams(window.location.search);
