@@ -21,7 +21,7 @@
     <meta property="og:url" content="https://feifei.com.tw/en/">
     <meta property="og:title" content="Fei Lin (Phoebe) | Cybersecurity Expert · OSCE³ · CEO of Kiwis">
     <meta property="og:description" content="Cybersecurity expert and CEO of Kiwis. Holder of OSCE3, OSCP and other certifications, specializing in penetration testing, web security and IoT security. Offering corporate security training and consulting.">
-    <meta property="og:image" content="https://ccmsassets.ithome.com.tw/2023/4/10/977c5069-82a0-42a2-89cf-c7fcc72ef493.jpg">
+    <meta property="og:image" content="https://feifei.com.tw/static/img/profile.jpg">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="zh_TW">
     <meta property="og:site_name" content="Fei Lin (Phoebe)">
@@ -32,7 +32,7 @@
     <meta name="twitter:creator" content="@fei3363">
     <meta name="twitter:title" content="Fei Lin (Phoebe) | Cybersecurity Expert · OSCE³ · CEO of Kiwis">
     <meta name="twitter:description" content="Cybersecurity expert and CEO of Kiwis. Holder of OSCE3, OSCP and other certifications, specializing in penetration testing, web security and IoT security.">
-    <meta name="twitter:image" content="https://ccmsassets.ithome.com.tw/2023/4/10/977c5069-82a0-42a2-89cf-c7fcc72ef493.jpg">
+    <meta name="twitter:image" content="https://feifei.com.tw/static/img/profile.jpg">
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -42,7 +42,7 @@
         "name": "Fei Lin",
         "alternateName": "Phoebe",
         "url": "https://feifei.com.tw/en/",
-        "image": "https://ccmsassets.ithome.com.tw/2023/4/10/977c5069-82a0-42a2-89cf-c7fcc72ef493.jpg",
+        "image": "https://feifei.com.tw/static/img/profile.jpg",
         "jobTitle": "Chief Executive Officer",
         "worksFor": {
             "@type": "Organization",
@@ -80,10 +80,23 @@
 	  gtag('config', 'G-BTTSHMPBYZ');
 	</script>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <!-- Apply saved theme before paint to avoid flash -->
+    <script>
+      try {
+        if (localStorage.getItem('theme') === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    </script>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             fontFamily: {
@@ -113,6 +126,36 @@
       /* Custom details marker */
       details summary::-webkit-details-marker { display: none; }
       details summary { list-style: none; }
+
+      /* Dark mode (overrides Tailwind utility colors) */
+      html.dark body { background-color: #0f172a; color: #e5e7eb; }
+      html.dark .bg-white { background-color: #1e293b !important; }
+      html.dark .bg-gray-50 { background-color: #0f172a !important; }
+      html.dark .bg-gray-100 { background-color: #334155 !important; }
+      html.dark .bg-white\/95 { background-color: rgba(15,23,42,0.95) !important; }
+      html.dark .text-gray-900 { color: #f1f5f9 !important; }
+      html.dark .text-gray-700 { color: #cbd5e1 !important; }
+      html.dark .text-gray-600 { color: #94a3b8 !important; }
+      html.dark .text-gray-500 { color: #94a3b8 !important; }
+      html.dark .text-gray-400 { color: #64748b !important; }
+      html.dark .border-gray-200 { border-color: #334155 !important; }
+      html.dark .border-gray-300 { border-color: #475569 !important; }
+      html.dark .divide-gray-100 > :not([hidden]) ~ :not([hidden]) { border-color: #334155 !important; }
+      html.dark .hover\:bg-gray-100:hover { background-color: #334155 !important; }
+      html.dark .hover\:bg-gray-50:hover { background-color: #1e293b !important; }
+      html.dark .hover\:bg-gray-200:hover { background-color: #475569 !important; }
+      html.dark select { background-color: #1e293b !important; color: #e5e7eb !important; }
+
+      /* Print / Save as PDF */
+      @media print {
+        nav, footer, #theme-toggle, .no-print { display: none !important; }
+        main { padding-top: 0 !important; }
+        [data-year-content] { display: block !important; }
+        [data-year-tab], #year-select { display: none !important; }
+        body { background: #fff !important; color: #000 !important; }
+        a { text-decoration: none !important; color: #000 !important; }
+        section { page-break-inside: avoid; padding-top: 1rem !important; padding-bottom: 1rem !important; }
+      }
     </style>
 </head>
 
@@ -134,8 +177,12 @@
                     <a href="#skills" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">Skills</a>
                     <a href="#speaking" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">Speaking</a>
                     <a href="#awards" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">Awards</a>
+                    <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">Contact</a>
                     <a href="/blog/" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors">Blog</a>
                     <a href="../" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors border border-gray-200">中文</a>
+                    <button id="theme-toggle" aria-label="Toggle dark mode" class="ml-1 p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors">
+                        <i class="fas fa-moon text-lg"></i>
+                    </button>
                 </div>
 
                 <!-- Mobile menu button -->
@@ -160,8 +207,10 @@
                 <a href="#skills" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Skills</a>
                 <a href="#speaking" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Speaking & Teaching</a>
                 <a href="#awards" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Awards</a>
+                <a href="#contact" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Contact</a>
                 <a href="/blog/" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">Blog</a>
                 <a href="../" class="mobile-nav-link block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">中文</a>
+                <button id="theme-toggle-mobile" class="w-full text-left block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"><i class="fas fa-moon mr-2"></i>Dark mode</button>
             </div>
         </div>
     </nav>
@@ -175,14 +224,19 @@
                 <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                     <!-- Profile Image -->
                     <div class="flex-shrink-0">
-                        <img src="https://ccmsassets.ithome.com.tw/2023/4/10/977c5069-82a0-42a2-89cf-c7fcc72ef493.jpg" alt="Fei Lin (Phoebe)" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg ring-4 ring-white">
+                        <img src="../static/img/profile.jpg" alt="Fei Lin (Phoebe)" class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shadow-lg ring-4 ring-white">
                     </div>
 
                     <!-- Bio -->
                     <div class="text-center md:text-left">
                         <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Fei Lin</h1>
                         <p class="text-2xl md:text-3xl text-blue-600 font-medium mb-4">Phoebe · 飛飛 · 林子婷</p>
-                        <p class="text-lg text-gray-600 mb-6">Cybersecurity Expert · OSCE³ · CEO of Kiwis</p>
+                        <p class="text-lg text-gray-600 mb-4">Cybersecurity Expert · OSCE³ · CEO of Kiwis</p>
+
+                        <!-- Bio summary -->
+                        <p class="text-base text-gray-600 leading-relaxed mb-6 max-w-2xl">
+                            A cybersecurity expert focused on offensive research, holding 15 international certifications including OSCE³, and serving as CEO of Kiwis Co., Ltd. Specializing in penetration testing, web and IoT security, with deep involvement in corporate security training and red team exercises. With 130+ talks and courses delivered, dedicated to bringing real-world offense & defense knowledge to more people.
+                        </p>
 
                         <!-- Social Icons -->
                         <div class="flex flex-wrap justify-center md:justify-start gap-3">
@@ -213,6 +267,16 @@
                             <a href="https://www.books.com.tw/products/0010906898" target="_blank" rel="noopener" class="w-11 h-11 flex items-center justify-center bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors" title="Book">
                                 <i class="fas fa-book text-lg"></i>
                             </a>
+                        </div>
+
+                        <!-- Call to action -->
+                        <div class="flex flex-wrap justify-center md:justify-start gap-3 mt-6 no-print">
+                            <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                                <i class="fas fa-paper-plane"></i> Contact Me
+                            </a>
+                            <button onclick="window.print()" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-100 transition-colors">
+                                <i class="fas fa-file-download"></i> Download CV (PDF)
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -604,6 +668,37 @@
                         <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
                             <i class="fab fa-js-square text-2xl text-yellow-500"></i>
                             <span class="text-gray-700">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Tools -->
+                <div class="mb-10">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">Security Tools</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-bug text-2xl text-red-500"></i>
+                            <span class="text-gray-700">Burp Suite</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-network-wired text-2xl text-green-600"></i>
+                            <span class="text-gray-700">Nmap</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-skull-crossbones text-2xl text-gray-700"></i>
+                            <span class="text-gray-700">Metasploit</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-wave-square text-2xl text-blue-500"></i>
+                            <span class="text-gray-700">Wireshark</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-microchip text-2xl text-purple-500"></i>
+                            <span class="text-gray-700">Ghidra</span>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm">
+                            <i class="fab fa-linux text-2xl text-gray-800"></i>
+                            <span class="text-gray-700">Kali Linux</span>
                         </div>
                     </div>
                 </div>
@@ -1147,6 +1242,38 @@
             </div>
         </section>
 
+        <!-- Publications Section -->
+        <section id="publications" class="py-16 md:py-20 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Publications</h2>
+                <a href="https://www.books.com.tw/products/0010906898" target="_blank" rel="noopener noreferrer" class="flex items-start gap-4 p-6 bg-gray-50 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all group">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-book text-xl text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900">Published Cybersecurity Book <i class="fas fa-external-link-alt text-gray-400 group-hover:text-blue-500 text-xs ml-1"></i></h3>
+                        <p class="text-sm text-gray-600 mt-1">A professional cybersecurity book I contributed to, available on Books.com.tw.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-20 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Contact</h2>
+                <p class="text-gray-500 mb-8">For collaborations, speaking, security consulting and training, reach out via the channels below</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://www.linkedin.com/in/feifei3363" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="https://l.feifei.tw/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-link"></i> Links Hub
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -1178,6 +1305,22 @@
             closeIcon.classList.add('hidden');
         });
     });
+
+    // Dark mode toggle
+    function updateThemeIcons() {
+        const isDark = document.documentElement.classList.contains('dark');
+        document.querySelectorAll('#theme-toggle i').forEach(i => {
+            i.className = isDark ? 'fas fa-sun text-lg' : 'fas fa-moon text-lg';
+        });
+    }
+    function toggleTheme() {
+        const isDark = document.documentElement.classList.toggle('dark');
+        try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (e) {}
+        updateThemeIcons();
+    }
+    document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+    document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+    updateThemeIcons();
 
     // Year tab switching (for speaking records)
     function showYear(year) {
